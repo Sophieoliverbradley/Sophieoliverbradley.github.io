@@ -1,177 +1,130 @@
 import * as React from "react";
 import type { HeadFC, PageProps } from "gatsby";
 
-const pageStyles = {
-  color: "#232129",
-  padding: 96,
-  fontFamily: "-apple-system, Roboto, sans-serif, serif",
-};
-const paragraphStyles = {
-  marginBottom: 48,
-};
-const codeStyles = {
-  color: "#8A6534",
-  padding: 4,
-  backgroundColor: "#FFF4DB",
-  fontSize: "1.25rem",
-  borderRadius: 4,
-};
-const listStyles = {
-  marginBottom: 96,
-  paddingLeft: 0,
-};
-const doclistStyles = {
-  paddingLeft: 0,
-};
-const listItemStyles = {
-  fontWeight: 300,
-  fontSize: 24,
-  maxWidth: 560,
-  marginBottom: 30,
-};
-
-const linkStyle = {
-  color: "#8954A8",
-  fontWeight: "bold",
-  fontSize: 16,
-  verticalAlign: "5%",
-};
-
-const docLinkStyle = {
-  ...linkStyle,
-  listStyleType: "none",
-  display: `inline-block`,
-  marginBottom: 24,
-  marginRight: 12,
-};
-
-const descriptionStyle = {
-  color: "#232129",
-  fontSize: 14,
-  marginTop: 10,
-  marginBottom: 0,
-  lineHeight: 1.25,
-};
-
-const docLinks = [
+const faqs = [
   {
-    text: "TypeScript Documentation",
-    url: "https://www.gatsbyjs.com/docs/how-to/custom-configuration/typescript/",
-    color: "#8954A8",
+    question: "Where are your offices?",
+    answer: "2657 127 St. in the South Surrey, BC – White Rock area close to Crescent Beach, and, Suite 105, 5007 47A Ave in downtown Ladner, B.C",
   },
   {
-    text: "GraphQL Typegen Documentation",
-    url: "https://www.gatsbyjs.com/docs/how-to/local-development/graphql-typegen/",
-    color: "#8954A8",
-  },
-];
-
-const badgeStyle = {
-  color: "#fff",
-  backgroundColor: "#088413",
-  border: "1px solid #088413",
-  fontSize: 11,
-  fontWeight: "bold",
-  letterSpacing: 1,
-  borderRadius: 4,
-  padding: "4px 6px",
-  display: "inline-block",
-  position: "relative" as "relative",
-  top: -2,
-  marginLeft: 10,
-  lineHeight: 1,
-};
-
-const links = [
-  {
-    text: "Tutorial",
-    url: "https://www.gatsbyjs.com/docs/tutorial/getting-started/",
-    description:
-      "A great place to get started if you're new to web development. Designed to guide you through setting up your first Gatsby site.",
-    color: "#E95800",
+    question: "How much does it cost?",
+    answer: "$120 for a session lasting an hour to an hour and a quarter",
   },
   {
-    text: "How to Guides",
-    url: "https://www.gatsbyjs.com/docs/how-to/",
-    description:
-      "Practical step-by-step guides to help you achieve a specific goal. Most useful when you're trying to get something done.",
-    color: "#1099A8",
+    question: "How do I make an appointment?",
+    answer: (
+      <>
+        By phone{" "}
+        <a
+          href="tel:604-728-5207"
+          className="text-blue-600 hover:text-blue-800 underline"
+        >
+          604-728-5207
+        </a>{" "}
+        or email{" "}
+        <a
+          href="mailto:timheadcounselling@gmail.com"
+          className="text-blue-600 hover:text-blue-800 underline"
+        >
+          timheadcounselling@gmail.com
+        </a>
+      </>
+    ),
   },
   {
-    text: "Reference Guides",
-    url: "https://www.gatsbyjs.com/docs/reference/",
-    description:
-      "Nitty-gritty technical descriptions of how Gatsby works. Most useful when you need detailed information about Gatsby's APIs.",
-    color: "#BC027F",
+    question: "How long does it take to get an appointment?",
+    answer: "I can usually see you fairly quickly, the next day if I have a cancellation.",
   },
   {
-    text: "Conceptual Guides",
-    url: "https://www.gatsbyjs.com/docs/conceptual/",
-    description:
-      "Big-picture explanations of higher-level Gatsby concepts. Most useful for building understanding of a particular topic.",
-    color: "#0D96F2",
+    question: "Is there any coverage?",
+    answer:
+      "I am approved as a therapist by the B.C. Crime Victim Assistance Program, which provides coverage for some children and adults. Other possible funding through Employee Assistance Plans offered by employers or unions, eg, BCGEU.",
   },
   {
-    text: "Plugin Library",
-    url: "https://www.gatsbyjs.com/plugins",
-    description:
-      "Add functionality and customize your Gatsby site or app with thousands of plugins built by our amazing developer community.",
-    color: "#8EB814",
+    question: "Do you specialize in working with men or women, children or teens?",
+    answer:
+      "I'm equally comfortable with men and women and work with them in about equal numbers. I am happy to see your teen; I recommend acting quickly as soon as they say they are willing.",
   },
   {
-    text: "Build and Host",
-    url: "https://www.gatsbyjs.com/cloud",
-    badge: true,
-    description:
-      "Now you’re ready to show the world! Give your Gatsby site superpowers: Build and host on Netlify. Get started for free!",
-    color: "#663399",
+    question: "What does R.C.C. stand for?",
+    answer: (
+      <>
+        Registered Clinical Counsellor. It means I am registered with The B.C.
+        Association of Clinical Counsellors{" "}
+        <a
+          href="http://www.bc-counsellors.org/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-blue-600 hover:text-blue-800 underline"
+        >
+          www.bc-counsellors.org/
+        </a>{" "}
+        They provide and demand a standard of professional and ethical behavior,
+        provide ongoing professional updates, and investigate complaints, through
+        the courts if necessary.
+      </>
+    ),
+  },
+  {
+    question: "Have you had any complaints?",
+    answer:
+      "I encourage open and honest feedback about all feelings including complaints. I know I am not perfect, and in addition that the therapeutic process can generate some sensitive feelings. I have not received any formal complaints since becoming a member of BCACC or at any prior time.",
+  },
+  {
+    question: "How long have you been counselling professionally?",
+    answer:
+      "Full-time since around 1999 and part-time for a long time before that.",
   },
 ];
 
 const IndexPage: React.FC<PageProps> = () => {
   return (
-    <main style={pageStyles}>
-      <h1 className="text-4xl">Congratulations</h1>
-      <p style={paragraphStyles}>
-        Edit <code style={codeStyles}>src/pages/index.tsx</code> to see this
-        page update in real-time. 😎
-      </p>
-      <ul style={doclistStyles}>
-        {docLinks.map((doc) => (
-          <li key={doc.url} style={docLinkStyle}>
-            <a
-              style={linkStyle}
-              href={`${doc.url}?utm_source=starter&utm_medium=ts-docs&utm_campaign=minimal-starter-ts`}
-            >
-              {doc.text}
-            </a>
-          </li>
-        ))}
-      </ul>
-      <ul style={listStyles}>
-        {links.map((link) => (
-          <li key={link.url} style={{ ...listItemStyles, color: link.color }}>
-            <span>
-              <a
-                style={linkStyle}
-                href={`${link.url}?utm_source=starter&utm_medium=start-page&utm_campaign=minimal-starter-ts`}
-              >
-                {link.text}
-              </a>
-              {link.badge && (
-                <span style={badgeStyle} aria-label="New Badge">
-                  NEW!
-                </span>
-              )}
-              <p style={descriptionStyle}>{link.description}</p>
-            </span>
-          </li>
-        ))}
-      </ul>
+    <main className="min-h-screen bg-gray-50 text-gray-900">
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-12">
+        {/* Header Section */}
+        <header className="text-center mb-8 md:mb-12">
+          <h1 className="text-3xl md:text-4xl font-bold mb-2">
+            Tim Head <span className="font-normal">Ph.D</span>{" "}
+            <span className="font-normal">R.C.C.</span>
+          </h1>
+          <p className="text-xl md:text-2xl text-gray-700 mt-4">Welcome!</p>
+        </header>
+
+        {/* Main Title */}
+        <div className="mb-6 md:mb-8">
+          <h2 className="text-2xl md:text-3xl font-semibold text-center mb-4">
+            Tim Head Marriage Teens Family Counselling Therapist
+          </h2>
+          <nav className="text-sm text-gray-600 text-center mb-6">
+            Home / Frequently Asked Questions
+          </nav>
+        </div>
+
+        {/* FAQ Section */}
+        <section className="bg-white rounded-lg shadow-md p-6 md:p-8">
+          <div className="space-y-8">
+            {faqs.map((faq, index) => (
+              <div key={index} className="border-b border-gray-200 pb-6 last:border-b-0 last:pb-0">
+                <h3 className="text-lg md:text-xl font-semibold text-gray-900 mb-3">
+                  {faq.question}
+                </h3>
+                <p className="text-base md:text-lg text-gray-700 leading-relaxed">
+                  {faq.answer}
+                </p>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        {/* End marker */}
+        <div className="text-center mt-8 text-gray-500 text-sm">End</div>
+      </div>
     </main>
   );
 };
 
 export default IndexPage;
 
-export const Head: HeadFC = () => <title>Home Page</title>;
+export const Head: HeadFC = () => (
+  <title>Tim Head Counselling - Home / Frequently Asked Questions</title>
+);
