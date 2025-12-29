@@ -1,10 +1,12 @@
 import * as React from "react";
 import type { HeadFC, PageProps } from "gatsby";
+import SEO from "../components/seo";
 
 const faqs = [
   {
     question: "Where are your offices?",
-    answer: "2657 127 St. in the South Surrey, BC – White Rock area close to Crescent Beach, and, Suite 105, 5007 47A Ave in downtown Ladner, B.C",
+    answer:
+      "2657 127 St. in the South Surrey, BC – White Rock area close to Crescent Beach, and, Suite 105, 5007 47A Ave in downtown Ladner, B.C",
   },
   {
     question: "How much does it cost?",
@@ -33,7 +35,8 @@ const faqs = [
   },
   {
     question: "How long does it take to get an appointment?",
-    answer: "I can usually see you fairly quickly, the next day if I have a cancellation.",
+    answer:
+      "I can usually see you fairly quickly, the next day if I have a cancellation.",
   },
   {
     question: "Is there any coverage?",
@@ -41,7 +44,8 @@ const faqs = [
       "I am approved as a therapist by the B.C. Crime Victim Assistance Program, which provides coverage for some children and adults. Other possible funding through Employee Assistance Plans offered by employers or unions, eg, BCGEU.",
   },
   {
-    question: "Do you specialize in working with men or women, children or teens?",
+    question:
+      "Do you specialize in working with men or women, children or teens?",
     answer:
       "I'm equally comfortable with men and women and work with them in about equal numbers. I am happy to see your teen; I recommend acting quickly as soon as they say they are willing.",
   },
@@ -60,8 +64,8 @@ const faqs = [
           www.bc-counsellors.org/
         </a>{" "}
         They provide and demand a standard of professional and ethical behavior,
-        provide ongoing professional updates, and investigate complaints, through
-        the courts if necessary.
+        provide ongoing professional updates, and investigate complaints,
+        through the courts if necessary.
       </>
     ),
   },
@@ -104,7 +108,10 @@ const IndexPage: React.FC<PageProps> = () => {
         <section className="bg-white rounded-lg shadow-md p-6 md:p-8">
           <div className="space-y-8">
             {faqs.map((faq, index) => (
-              <div key={index} className="border-b border-gray-200 pb-6 last:border-b-0 last:pb-0">
+              <div
+                key={index}
+                className="border-b border-gray-200 pb-6 last:border-b-0 last:pb-0"
+              >
                 <h3 className="text-lg md:text-xl font-semibold text-gray-900 mb-3">
                   {faq.question}
                 </h3>
@@ -126,5 +133,9 @@ const IndexPage: React.FC<PageProps> = () => {
 export default IndexPage;
 
 export const Head: HeadFC = () => (
-  <title>Tim Head Counselling - Home / Frequently Asked Questions</title>
+  <SEO
+    title="Home / Frequently Asked Questions"
+    description="Frequently asked questions about Tim Head Counselling services. Get information about appointments, costs, locations, and more for marriage, teens, and family counselling in South Surrey and Ladner, BC."
+    pathname="/"
+  />
 );
