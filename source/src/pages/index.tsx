@@ -5,8 +5,15 @@ import SEO from "../components/seo";
 const faqs = [
   {
     question: "Where are your offices?",
-    answer:
-      "2657 127 St. in the South Surrey, BC – White Rock area close to Crescent Beach, and, Suite 105, 5007 47A Ave in downtown Ladner, B.C",
+    answer: (
+      <ul className="list-disc list-inside space-y-2 ml-4">
+        <li>
+          2657 127 St. in the South Surrey, BC – White Rock area close to
+          Crescent Beach
+        </li>
+        <li>Suite 105, 5007 47A Ave in downtown Ladner, B.C</li>
+      </ul>
+    ),
   },
   {
     question: "How much does it cost?",
@@ -122,9 +129,6 @@ const IndexPage: React.FC<PageProps> = () => {
             ))}
           </div>
         </section>
-
-        {/* End marker */}
-        <div className="text-center mt-8 text-gray-500 text-sm">End</div>
       </div>
     </main>
   );
