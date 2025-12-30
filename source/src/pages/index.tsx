@@ -3,6 +3,21 @@ import type { HeadFC, PageProps } from "gatsby";
 import SEO from "../components/seo";
 import timHeadImage from "../images/tim-head.jpeg";
 
+const testimonials = [
+  {
+    text: "Dear Tim, I want to thank-you for the encouragement you have given me to explore the tools available for self-discovery available to all of us. With your guidance, intuition and ability, you were able to capture the emotion I was experiencing in our sessions and help me process and understand where it comes from. This understanding combined with learned breathing techniques and a new self-awareness in our sessions has given me the ability to accept myself with love and enthusiasm. I am now much more centered and able to live life with more freedom and peace. I am more connected with myself and know and feel that I am an integral part of my family. It has been hard work but also very rewarding and is evidenced in my relationships. Thank-you for your caring, supportive and effective therapy.",
+    author: "Richard",
+  },
+  {
+    text: "I have suffered from bouts of anxiety since I was a child. Tim has helped me examine the anxiety and give it a positive edge, like it has something to teach me, a positive intention to it. In recent years I have found that my anxiety has diminished. Tim has taught me not only to look at my anxiety in this way, but also to incorporate breath into the physical side of anxiety, which has been very helpful in easing the effects of it. Tim's skilled questioning allows me to find a different perspective on the problems in my life. In most cases, the solution to the problem is in seeing it in a completely different light. I find that Tim can lead me in the right direction with his questions to help me find the perspective I need. Tim is someone I find to be very easy to talk to so that I have been able to share (and get perspective on) the grief around my Father's death, 2 miscarriages, my marriage & children, including an addict son. I appreciate all that he has done for me.",
+    author: "L.S.",
+  },
+  {
+    text: "My name is Jim. I was referred to Tim by my family Doctor. I went to my family Doctor for a referral after my wife left me without warning for someone I thought was my friend. I am someone who believes that we have within ourselves the strength to create a better and happier life for ourselves and those around us. The means is what is usually lacking. I knew that I was not the first person on this earth who was in my situation. Tim was able to tap into my inner strength through: inner reflection, guiding words, hard truths, kind encouragement and physical exercises that enabled me to use my sadness and anger as a means to wholeness. His education and knowledge ensures that he does not lead one down some garden path where sugar coated solutions are created only to dissolve when a storm hits. He is a good listener, but also knew when I was just talking to avoid an issue. He knows how to push, but will not push you too far.",
+    author: "Jim G.",
+  },
+];
+
 const faqs = [
   {
     question: "Where are your offices?",
@@ -229,6 +244,40 @@ const IndexPage: React.FC<PageProps> = () => {
                     {faq.answer}
                   </p>
                 </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Testimonials Section */}
+        <section className="max-w-5xl mx-auto rounded-lg p-6 md:p-8 mb-8">
+          <div className="flex flex-col md:flex-row gap-6 md:gap-12">
+            {/* Left Side: Header */}
+            <div className="flex flex-col items-center md:items-start md:w-1/3">
+              <h2 className="text-2xl md:text-3xl font-semibold mb-6 text-center md:text-left">
+                Testimonials
+              </h2>
+            </div>
+
+            {/* Right Side: Testimonials */}
+            <div className="flex-1 space-y-8">
+              {testimonials.map((testimonial, index) => (
+                <blockquote
+                  key={index}
+                  className="border-l-4 border-purple-500 pl-6 pr-4 py-4 bg-white rounded-r-lg shadow-sm relative"
+                >
+                  <div className="absolute top-0 left-4 text-purple-300 text-6xl font-serif leading-none -mt-2">
+                    "
+                  </div>
+                  <p className="text-base md:text-lg text-gray-700 leading-relaxed italic relative z-10 mb-4">
+                    {testimonial.text}
+                  </p>
+                  <footer className="text-right">
+                    <cite className="text-base md:text-lg font-semibold text-purple-700 not-italic">
+                      — {testimonial.author}
+                    </cite>
+                  </footer>
+                </blockquote>
               ))}
             </div>
           </div>
