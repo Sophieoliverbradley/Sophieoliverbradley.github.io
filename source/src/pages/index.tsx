@@ -246,7 +246,8 @@ const IndexPage: React.FC<PageProps> = () => {
                 </h3>
                 <ul className="space-y-2 ml-4">
                   <li className="text-base md:text-lg text-gray-700 leading-relaxed">
-                    <span className="font-semibold">·</span> Individual counselling
+                    <span className="font-semibold">·</span> Individual
+                    counselling
                   </li>
                   <li className="text-base md:text-lg text-gray-700 leading-relaxed">
                     <span className="font-semibold">·</span> Teen counselling
@@ -311,7 +312,8 @@ const IndexPage: React.FC<PageProps> = () => {
                     counselling
                   </li>
                   <li className="text-base md:text-lg text-gray-700 leading-relaxed">
-                    <span className="font-semibold">·</span> Parenting challenges
+                    <span className="font-semibold">·</span> Parenting
+                    challenges
                   </li>
                   <li className="text-base md:text-lg text-gray-700 leading-relaxed">
                     <span className="font-semibold">·</span> Parenting through
@@ -353,9 +355,9 @@ const IndexPage: React.FC<PageProps> = () => {
               <p className="text-base md:text-lg text-gray-700 leading-relaxed">
                 I have a general interest in experiential, non-intellectual
                 therapies. In coordinating and balancing various influences I am
-                guided by my Satir family and individual counselling training. It
-                is highly positive and allows for considerable flexibility. (Satir
-                is one of the pioneers of family therapy – see{" "}
+                guided by my Satir family and individual counselling training.
+                It is highly positive and allows for considerable flexibility.
+                (Satir is one of the pioneers of family therapy – see{" "}
                 <a
                   href="http://www.satirpacific.org/"
                   target="_blank"
@@ -365,8 +367,8 @@ const IndexPage: React.FC<PageProps> = () => {
                   www.satirpacific.org
                 </a>
                 ). Other influences include attachment theory and research,
-                Option counselling, somatic experiencing and breath work, and the
-                Socratic dialogue.
+                Option counselling, somatic experiencing and breath work, and
+                the Socratic dialogue.
               </p>
             </div>
           </div>
@@ -431,6 +433,59 @@ const IndexPage: React.FC<PageProps> = () => {
                   </footer>
                 </blockquote>
               ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Contact Me Section */}
+        <section className="max-w-5xl mx-auto rounded-lg p-6 md:p-8 mb-8">
+          <div className="flex flex-col md:flex-row gap-6 md:gap-12">
+            {/* Left Side: Header */}
+            <div className="flex flex-col items-center md:items-start md:w-1/3">
+              <h2 className="text-2xl md:text-3xl font-semibold mb-6 text-center md:text-left">
+                Contact Me
+              </h2>
+            </div>
+
+            {/* Right Side: Contact Information */}
+            <div className="flex-1 space-y-6">
+              <div className="space-y-2">
+                <div className="text-base md:text-lg font-semibold text-gray-900">
+                  Email
+                </div>
+                <div className="text-base md:text-lg text-gray-700">
+                  <a
+                    href="mailto:timheadcounselling@gmail.com"
+                    className="text-purple-600 hover:text-purple-800 underline"
+                  >
+                    timheadcounselling@gmail.com
+                  </a>
+                </div>
+              </div>
+
+              <div className="space-y-2">
+                <div className="text-base md:text-lg font-semibold text-gray-900">
+                  Phone
+                </div>
+                <div className="text-base md:text-lg text-gray-700">
+                  <a
+                    href="tel:604-728-5207"
+                    className="text-purple-600 hover:text-purple-800 underline"
+                  >
+                    604-728-5207
+                  </a>
+                </div>
+              </div>
+
+              <div className="space-y-2">
+                <div className="text-base md:text-lg font-semibold text-gray-900">
+                  Address
+                </div>
+                <div className="text-base md:text-lg text-gray-700">
+                  2657 127 St. in the South Surrey, BC – White Rock area close
+                  to Crescent Beach
+                </div>
+              </div>
             </div>
           </div>
         </section>
