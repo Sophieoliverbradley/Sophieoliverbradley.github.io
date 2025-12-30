@@ -95,7 +95,7 @@ const IndexPage: React.FC<PageProps> = () => {
           <p className="text-xl md:text-2xl text-gray-700 mt-4">Welcome!</p>
         </header>
 
-        {/* About Content Section */}
+        {/* About Me Section */}
         <section className="max-w-5xl mx-auto rounded-lg p-6 md:p-8 mb-8">
           <div className="flex flex-col md:flex-row gap-6 md:gap-12">
             {/* Left Side: Header and Profile Image */}
@@ -206,21 +206,31 @@ const IndexPage: React.FC<PageProps> = () => {
         </section>
 
         {/* FAQ Section */}
-        <section className="bg-white rounded-lg shadow-md p-6 md:p-8">
-          <div className="space-y-8">
-            {faqs.map((faq, index) => (
-              <div
-                key={index}
-                className="border-b border-purple-200 pb-6 last:border-b-0 last:pb-0"
-              >
-                <h3 className="text-lg md:text-xl font-semibold text-gray-900 mb-3">
-                  {faq.question}
-                </h3>
-                <p className="text-base md:text-lg text-gray-700 leading-relaxed">
-                  {faq.answer}
-                </p>
-              </div>
-            ))}
+        <section className="max-w-5xl mx-auto rounded-lg p-6 md:p-8 mb-8">
+          <div className="flex flex-col md:flex-row gap-6 md:gap-12">
+            {/* Left Side: Header */}
+            <div className="flex flex-col items-center md:items-start md:w-1/3">
+              <h2 className="text-2xl md:text-3xl font-semibold mb-6 text-center md:text-left">
+                Frequently Asked Questions
+              </h2>
+            </div>
+
+            {/* Right Side: FAQ Items */}
+            <div className="flex-1 space-y-8">
+              {faqs.map((faq, index) => (
+                <div
+                  key={index}
+                  className="border-b border-purple-200 pb-6 last:border-b-0 last:pb-0"
+                >
+                  <h3 className="text-lg md:text-xl font-semibold text-gray-900 mb-3">
+                    {faq.question}
+                  </h3>
+                  <p className="text-base md:text-lg text-gray-700 leading-relaxed">
+                    {faq.answer}
+                  </p>
+                </div>
+              ))}
+            </div>
           </div>
         </section>
       </div>
