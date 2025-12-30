@@ -220,6 +220,158 @@ const IndexPage: React.FC<PageProps> = () => {
           </div>
         </section>
 
+        {/* Counselling Services Section */}
+        <section className="max-w-5xl mx-auto rounded-lg p-6 md:p-8 mb-8">
+          <div className="flex flex-col md:flex-row gap-6 md:gap-12">
+            {/* Left Side: Header */}
+            <div className="flex flex-col items-center md:items-start md:w-1/3">
+              <h2 className="text-2xl md:text-3xl font-semibold mb-6 text-center md:text-left">
+                Counselling Services
+              </h2>
+            </div>
+
+            {/* Right Side: Content */}
+            <div className="flex-1 space-y-6">
+              <p className="text-base md:text-lg text-gray-700 leading-relaxed">
+                In general I work with clients at multiple levels according to
+                what best fits with each individual or family – emotional and
+                psychological, breath and body (internal sensation and other
+                experience), and spiritual.
+              </p>
+
+              {/* Individual Counselling */}
+              <div>
+                <h3 className="text-xl font-bold text-gray-900 mb-3">
+                  Individual
+                </h3>
+                <ul className="space-y-2 ml-4">
+                  <li className="text-base md:text-lg text-gray-700 leading-relaxed">
+                    <span className="font-semibold">·</span> Individual counselling
+                  </li>
+                  <li className="text-base md:text-lg text-gray-700 leading-relaxed">
+                    <span className="font-semibold">·</span> Teen counselling
+                  </li>
+                  <li className="text-base md:text-lg text-gray-700 leading-relaxed">
+                    <span className="font-semibold">·</span> Anxiety
+                  </li>
+                  <li className="text-base md:text-lg text-gray-700 leading-relaxed">
+                    <span className="font-semibold">·</span> Depression
+                  </li>
+                  <li className="text-base md:text-lg text-gray-700 leading-relaxed">
+                    <span className="font-semibold">·</span> Bullying issues
+                  </li>
+                  <li className="text-base md:text-lg text-gray-700 leading-relaxed">
+                    <span className="font-semibold">·</span> Self-esteem work
+                  </li>
+                  <li className="text-base md:text-lg text-gray-700 leading-relaxed">
+                    <span className="font-semibold">·</span> Grief or loss
+                  </li>
+                  <li className="text-base md:text-lg text-gray-700 leading-relaxed">
+                    <span className="font-semibold">·</span> Childhood neglect
+                    and abuse issues
+                  </li>
+                  <li className="text-base md:text-lg text-gray-700 leading-relaxed">
+                    <span className="font-semibold">·</span> Family of origin
+                    work / psychotherapy
+                  </li>
+                  <li className="text-base md:text-lg text-gray-700 leading-relaxed">
+                    <span className="font-semibold">·</span> Drug or alcohol
+                    issues
+                  </li>
+                  <li className="text-base md:text-lg text-gray-700 leading-relaxed">
+                    <span className="font-semibold">·</span> Work problems
+                  </li>
+                  <li className="text-base md:text-lg text-gray-700 leading-relaxed">
+                    <span className="font-semibold">·</span> Road rage / Anger
+                  </li>
+                  <li className="text-base md:text-lg text-gray-700 leading-relaxed">
+                    <span className="font-semibold">·</span> Life transitions
+                  </li>
+                  <li className="text-base md:text-lg text-gray-700 leading-relaxed">
+                    <span className="font-semibold">·</span> Stress reduction
+                  </li>
+                  <li className="text-base md:text-lg text-gray-700 leading-relaxed">
+                    <span className="font-semibold">·</span> Healing of trauma
+                  </li>
+                  <li className="text-base md:text-lg text-gray-700 leading-relaxed">
+                    <span className="font-semibold">·</span> Other
+                  </li>
+                </ul>
+              </div>
+
+              {/* Family Counselling */}
+              <div>
+                <h3 className="text-xl font-bold text-gray-900 mb-3">Family</h3>
+                <ul className="space-y-2 ml-4">
+                  <li className="text-base md:text-lg text-gray-700 leading-relaxed">
+                    <span className="font-semibold">·</span> Family counselling
+                  </li>
+                  <li className="text-base md:text-lg text-gray-700 leading-relaxed">
+                    <span className="font-semibold">·</span> Marriage or couples
+                    counselling
+                  </li>
+                  <li className="text-base md:text-lg text-gray-700 leading-relaxed">
+                    <span className="font-semibold">·</span> Parenting challenges
+                  </li>
+                  <li className="text-base md:text-lg text-gray-700 leading-relaxed">
+                    <span className="font-semibold">·</span> Parenting through
+                    divorce
+                  </li>
+                  <li className="text-base md:text-lg text-gray-700 leading-relaxed">
+                    <span className="font-semibold">·</span> Conflict resolution
+                  </li>
+                  <li className="text-base md:text-lg text-gray-700 leading-relaxed">
+                    <span className="font-semibold">·</span> Communication
+                    building
+                  </li>
+                  <li className="text-base md:text-lg text-gray-700 leading-relaxed">
+                    <span className="font-semibold">·</span> Families affected
+                    by mental illness
+                  </li>
+                  <li className="text-base md:text-lg text-gray-700 leading-relaxed">
+                    <span className="font-semibold">·</span> Any Individual item
+                    above
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Influences Section */}
+        <section className="max-w-5xl mx-auto rounded-lg p-6 md:p-8 mb-8">
+          <div className="flex flex-col md:flex-row gap-6 md:gap-12">
+            {/* Left Side: Header */}
+            <div className="flex flex-col items-center md:items-start md:w-1/3">
+              <h2 className="text-2xl md:text-3xl font-semibold mb-6 text-center md:text-left">
+                Influences
+              </h2>
+            </div>
+
+            {/* Right Side: Content */}
+            <div className="flex-1 space-y-4">
+              <p className="text-base md:text-lg text-gray-700 leading-relaxed">
+                I have a general interest in experiential, non-intellectual
+                therapies. In coordinating and balancing various influences I am
+                guided by my Satir family and individual counselling training. It
+                is highly positive and allows for considerable flexibility. (Satir
+                is one of the pioneers of family therapy – see{" "}
+                <a
+                  href="http://www.satirpacific.org/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-purple-600 hover:text-purple-800 underline"
+                >
+                  www.satirpacific.org
+                </a>
+                ). Other influences include attachment theory and research,
+                Option counselling, somatic experiencing and breath work, and the
+                Socratic dialogue.
+              </p>
+            </div>
+          </div>
+        </section>
+
         {/* FAQ Section */}
         <section className="max-w-5xl mx-auto rounded-lg p-6 md:p-8 mb-8">
           <div className="flex flex-col md:flex-row gap-6 md:gap-12">
