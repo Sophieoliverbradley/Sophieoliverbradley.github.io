@@ -2,6 +2,7 @@ import * as React from "react";
 import type { HeadFC, PageProps } from "gatsby";
 import SEO from "../components/seo";
 import timHeadImage from "../images/tim-head.jpeg";
+import logoImage from "../images/logo.png";
 
 const testimonials = [
   {
@@ -98,20 +99,138 @@ const faqs = [
 ];
 
 const IndexPage: React.FC<PageProps> = () => {
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = React.useState(false);
+
+  const scrollToSection = (sectionId: string) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth", block: "start" });
+      setIsMobileMenuOpen(false);
+    }
+  };
+
   return (
     <main className="min-h-screen bg-purple-50 text-gray-900">
+      {/* Sticky Header */}
+      <header className="sticky top-0 z-50 bg-white shadow-md">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex items-center justify-between h-16 md:h-20">
+            {/* Logo and Brand */}
+            <div className="flex items-center space-x-3">
+              <img
+                src={logoImage}
+                alt="Phoenix Counselling Logo"
+                className="h-10 md:h-12 w-auto"
+              />
+              <span className="text-lg md:text-xl font-semibold text-gray-900">
+                Phoenix Counselling
+              </span>
+            </div>
+
+            {/* Desktop Navigation */}
+            <nav className="hidden md:flex items-center space-x-6">
+              <button
+                onClick={() => scrollToSection("about-me")}
+                className="text-gray-700 hover:text-purple-600 transition-colors text-base font-medium"
+              >
+                About me
+              </button>
+              <button
+                onClick={() => scrollToSection("counselling-services")}
+                className="text-gray-700 hover:text-purple-600 transition-colors text-base font-medium"
+              >
+                Counselling Services
+              </button>
+              <button
+                onClick={() => scrollToSection("faqs")}
+                className="text-gray-700 hover:text-purple-600 transition-colors text-base font-medium"
+              >
+                FAQs
+              </button>
+              <button
+                onClick={() => scrollToSection("testimonials")}
+                className="text-gray-700 hover:text-purple-600 transition-colors text-base font-medium"
+              >
+                Testimonials
+              </button>
+              <button
+                onClick={() => scrollToSection("contact-me")}
+                className="text-gray-700 hover:text-purple-600 transition-colors text-base font-medium"
+              >
+                Contact Me
+              </button>
+            </nav>
+
+            {/* Mobile Menu Button */}
+            <button
+              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+              className="md:hidden text-gray-700 hover:text-purple-600 transition-colors text-base font-medium"
+              aria-label="Toggle menu"
+            >
+              Links
+            </button>
+          </div>
+        </div>
+
+        {/* Mobile Fullscreen Menu */}
+        {isMobileMenuOpen && (
+          <div className="fixed inset-0 z-50 bg-white md:hidden">
+            <div className="flex flex-col items-center justify-center h-full space-y-8">
+              <button
+                onClick={() => scrollToSection("about-me")}
+                className="text-2xl font-medium text-gray-900 hover:text-purple-600 transition-colors"
+              >
+                About me
+              </button>
+              <button
+                onClick={() => scrollToSection("counselling-services")}
+                className="text-2xl font-medium text-gray-900 hover:text-purple-600 transition-colors"
+              >
+                Counselling Services
+              </button>
+              <button
+                onClick={() => scrollToSection("faqs")}
+                className="text-2xl font-medium text-gray-900 hover:text-purple-600 transition-colors"
+              >
+                FAQs
+              </button>
+              <button
+                onClick={() => scrollToSection("testimonials")}
+                className="text-2xl font-medium text-gray-900 hover:text-purple-600 transition-colors"
+              >
+                Testimonials
+              </button>
+              <button
+                onClick={() => scrollToSection("contact-me")}
+                className="text-2xl font-medium text-gray-900 hover:text-purple-600 transition-colors"
+              >
+                Contact Me
+              </button>
+              <button
+                onClick={() => setIsMobileMenuOpen(false)}
+                className="mt-8 text-lg text-gray-500 hover:text-gray-700"
+              >
+                Close
+              </button>
+            </div>
+          </div>
+        )}
+      </header>
+
       <div>
         {/* Header Section */}
-        <header className="text-center mb-8 md:mb-12">
+        <header className="text-center mb-8 md:mb-12 pt-8">
           <h1 className="text-3xl md:text-4xl font-bold mb-2">
             Tim Head <span className="font-normal">Ph.D</span>{" "}
             <span className="font-normal">R.C.C.</span>
           </h1>
-          <p className="text-xl md:text-2xl text-gray-700 mt-4">Welcome!</p>
         </header>
 
         {/* About Me Section */}
-        <section className="max-w-5xl mx-auto rounded-lg p-6 md:p-8 mb-8">
+        <section
+          id="about-me"
+          className="max-w-5xl mx-auto rounded-lg p-6 md:p-8 mb-8 scroll-mt-20"
+        >
           <div className="flex flex-col md:flex-row gap-6 md:gap-12">
             {/* Left Side: Header and Profile Image */}
             <div className="flex flex-col items-center md:items-start md:w-1/3">
@@ -221,7 +340,10 @@ const IndexPage: React.FC<PageProps> = () => {
         </section>
 
         {/* Counselling Services Section */}
-        <section className="max-w-5xl mx-auto rounded-lg p-6 md:p-8 mb-8">
+        <section
+          id="counselling-services"
+          className="max-w-5xl mx-auto rounded-lg p-6 md:p-8 mb-8 scroll-mt-20"
+        >
           <div className="flex flex-col md:flex-row gap-6 md:gap-12">
             {/* Left Side: Header */}
             <div className="flex flex-col items-center md:items-start md:w-1/3">
@@ -375,7 +497,10 @@ const IndexPage: React.FC<PageProps> = () => {
         </section>
 
         {/* FAQ Section */}
-        <section className="max-w-5xl mx-auto rounded-lg p-6 md:p-8 mb-8">
+        <section
+          id="faqs"
+          className="max-w-5xl mx-auto rounded-lg p-6 md:p-8 mb-8 scroll-mt-20"
+        >
           <div className="flex flex-col md:flex-row gap-6 md:gap-12">
             {/* Left Side: Header */}
             <div className="flex flex-col items-center md:items-start md:w-1/3">
@@ -404,7 +529,10 @@ const IndexPage: React.FC<PageProps> = () => {
         </section>
 
         {/* Testimonials Section */}
-        <section className="max-w-5xl mx-auto rounded-lg p-6 md:p-8 mb-8">
+        <section
+          id="testimonials"
+          className="max-w-5xl mx-auto rounded-lg p-6 md:p-8 mb-8 scroll-mt-20"
+        >
           <div className="flex flex-col md:flex-row gap-6 md:gap-12">
             {/* Left Side: Header */}
             <div className="flex flex-col items-center md:items-start md:w-1/3">
@@ -438,7 +566,10 @@ const IndexPage: React.FC<PageProps> = () => {
         </section>
 
         {/* Contact Me Section */}
-        <section className="max-w-5xl mx-auto rounded-lg p-6 md:p-8 mb-8">
+        <section
+          id="contact-me"
+          className="max-w-5xl mx-auto rounded-lg p-6 md:p-8 mb-8 scroll-mt-20"
+        >
           <div className="flex flex-col md:flex-row gap-6 md:gap-12">
             {/* Left Side: Header */}
             <div className="flex flex-col items-center md:items-start md:w-1/3">
