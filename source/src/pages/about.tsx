@@ -5,7 +5,7 @@ import timHeadImage from "../images/tim-head.jpg";
 
 const AboutPage: React.FC<PageProps> = () => {
   return (
-    <main className="min-h-screen bg-gray-50 text-gray-900">
+    <main className="min-h-screen bg-purple-50 text-gray-900">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-12">
         {/* Header Section */}
         <header className="text-center mb-8 md:mb-12">
@@ -27,7 +27,7 @@ const AboutPage: React.FC<PageProps> = () => {
           <img
             src={timHeadImage}
             alt="Tim Head"
-            className="rounded-lg shadow-md border-2 border-gray-300 max-w-xs w-full h-auto"
+            className="rounded-lg shadow-md border-2 border-purple-300 max-w-xs w-full h-auto"
           />
         </div>
 

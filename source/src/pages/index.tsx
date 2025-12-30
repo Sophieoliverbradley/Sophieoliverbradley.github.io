@@ -5,15 +5,8 @@ import SEO from "../components/seo";
 const faqs = [
   {
     question: "Where are your offices?",
-    answer: (
-      <ul className="list-disc list-inside space-y-2 ml-4">
-        <li>
-          2657 127 St. in the South Surrey, BC – White Rock area close to
-          Crescent Beach
-        </li>
-        <li>Suite 105, 5007 47A Ave in downtown Ladner, B.C</li>
-      </ul>
-    ),
+    answer:
+      "2657 127 St. in the South Surrey, BC – White Rock area close to Crescent Beach",
   },
   {
     question: "How much does it cost?",
@@ -26,14 +19,14 @@ const faqs = [
         By phone{" "}
         <a
           href="tel:604-728-5207"
-          className="text-blue-600 hover:text-blue-800 underline"
+          className="text-purple-600 hover:text-purple-800 underline"
         >
           604-728-5207
         </a>{" "}
         or email{" "}
         <a
           href="mailto:timheadcounselling@gmail.com"
-          className="text-blue-600 hover:text-blue-800 underline"
+          className="text-purple-600 hover:text-purple-800 underline"
         >
           timheadcounselling@gmail.com
         </a>
@@ -66,7 +59,7 @@ const faqs = [
           href="http://www.bc-counsellors.org/"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-blue-600 hover:text-blue-800 underline"
+          className="text-purple-600 hover:text-purple-800 underline"
         >
           www.bc-counsellors.org/
         </a>{" "}
@@ -90,7 +83,7 @@ const faqs = [
 
 const IndexPage: React.FC<PageProps> = () => {
   return (
-    <main className="min-h-screen bg-gray-50 text-gray-900">
+    <main className="min-h-screen bg-purple-50 text-gray-900">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-12">
         {/* Header Section */}
         <header className="text-center mb-8 md:mb-12">
@@ -117,7 +110,7 @@ const IndexPage: React.FC<PageProps> = () => {
             {faqs.map((faq, index) => (
               <div
                 key={index}
-                className="border-b border-gray-200 pb-6 last:border-b-0 last:pb-0"
+                className="border-b border-purple-200 pb-6 last:border-b-0 last:pb-0"
               >
                 <h3 className="text-lg md:text-xl font-semibold text-gray-900 mb-3">
                   {faq.question}
