@@ -1,6 +1,7 @@
 import * as React from "react";
 import type { HeadFC, PageProps } from "gatsby";
 import SEO from "../components/seo";
+import Fonts from "../components/fonts";
 import timHeadImage from "../images/tim-head.jpeg";
 import logoImage from "../images/logo.png";
 
@@ -272,25 +273,25 @@ const IndexPage: React.FC<PageProps> = () => {
               <div className="flex-1 space-y-6">
                 {/* Education Section */}
                 <div>
-                  <h3 className="text-xl font-bold text-gray-900 mb-3">
+                  <h3 className="text-xl font-semibold text-gray-900 mb-3">
                     Education
                   </h3>
                   <ul className="space-y-2 ml-4">
                     <li className="text-base md:text-lg text-gray-700 leading-relaxed">
                       <span className="font-semibold">·</span> Ph.D in
-                      Developmental Psychology, U.B.C.
-                    </li>
-                    <li className="text-base md:text-lg text-gray-700 leading-relaxed ml-6">
-                      (Specialized in Family Attachment Relationships, and in
-                      Developmental Psychopathology)
+                      Developmental Psychology, U.B.C.{" "}
+                      <span className="text-base md:text-lg text-gray-500">
+                        (Specialized in Family Attachment Relationships, and in
+                        Developmental Psychopathology)
+                      </span>
                     </li>
                     <li className="text-base md:text-lg text-gray-700 leading-relaxed">
                       <span className="font-semibold">·</span> Master's Degree
-                      in Health Education, U.B.C.
-                    </li>
-                    <li className="text-base md:text-lg text-gray-700 leading-relaxed ml-6">
-                      (Specialized in child issues of neglect, physical and
-                      sexual abuse)
+                      in Health Education, U.B.C.{" "}
+                      <span className="text-base md:text-lg text-gray-500">
+                        (Specialized in child issues of neglect, physical and
+                        sexual abuse)
+                      </span>
                     </li>
                   </ul>
                 </div>
@@ -673,9 +674,12 @@ const IndexPage: React.FC<PageProps> = () => {
 export default IndexPage;
 
 export const Head: HeadFC = () => (
-  <SEO
-    title="Home / Frequently Asked Questions"
-    description="Frequently asked questions about Tim Head Counselling services. Get information about appointments, costs, locations, and more for marriage, teens, and family counselling in South Surrey and Ladner, BC."
-    pathname="/"
-  />
+  <>
+    <Fonts />
+    <SEO
+      title="Home / Frequently Asked Questions"
+      description="Frequently asked questions about Tim Head Counselling services. Get information about appointments, costs, locations, and more for marriage, teens, and family counselling in South Surrey and Ladner, BC."
+      pathname="/"
+    />
+  </>
 );

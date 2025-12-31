@@ -5,7 +5,9 @@ module.exports = {
     `./src/components/**/*.{js,jsx,ts,tsx}`,
   ],
   theme: {
-    extend: {},
+    extend: {
+      // Font families are now defined in your CSS with @theme for Tailwind v4+
+    },
   },
   plugins: [],
-}
+};
