@@ -17,6 +17,29 @@ const testimonials = [
     text: "My name is Jim. I was referred to Tim by my family Doctor. I went to my family Doctor for a referral after my wife left me without warning for someone I thought was my friend. I am someone who believes that we have within ourselves the strength to create a better and happier life for ourselves and those around us. The means is what is usually lacking. I knew that I was not the first person on this earth who was in my situation. Tim was able to tap into my inner strength through: inner reflection, guiding words, hard truths, kind encouragement and physical exercises that enabled me to use my sadness and anger as a means to wholeness. His education and knowledge ensures that he does not lead one down some garden path where sugar coated solutions are created only to dissolve when a storm hits. He is a good listener, but also knew when I was just talking to avoid an issue. He knows how to push, but will not push you too far.",
     author: "Jim G.",
   },
+  {
+    text: (
+      <>
+        Tim is phenomenal, intuitive, compassionate, & accepting as always.
+        <br />
+        5/5 on punctuality, helpfulness, and knowledge
+      </>
+    ),
+    date: "October 22, 2021",
+    author: "",
+  },
+  {
+    text: (
+      <>
+        Very professional, friendly, compassionate, and intelligent. I highly
+        recommend Tim to everyone.
+        <br />
+        5/5 in punctuality, helpfulness, and knowledge
+      </>
+    ),
+    date: "September 4, 2021",
+    author: "",
+  },
 ];
 
 const faqs = [
@@ -110,518 +133,540 @@ const IndexPage: React.FC<PageProps> = () => {
   };
 
   return (
-    <main className="min-h-screen bg-purple-50 text-gray-900">
-      {/* Sticky Header */}
-      <header className="sticky top-0 z-50 bg-white shadow-md">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-between h-16 md:h-20">
-            {/* Logo and Brand */}
-            <div className="flex items-center space-x-3">
-              <img
-                src={logoImage}
-                alt="Phoenix Counselling Logo"
-                className="h-10 md:h-12 w-auto"
-              />
-              <span className="text-lg md:text-xl font-semibold text-gray-900">
-                Phoenix Counselling
-              </span>
-            </div>
+    <>
+      <main className="min-h-screen bg-purple-50 text-gray-900">
+        {/* Sticky Header */}
+        <header className="sticky top-0 z-50 bg-white shadow-md">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="flex items-center justify-between h-16 md:h-20">
+              {/* Logo and Brand */}
+              <div className="flex items-center space-x-3">
+                <img
+                  src={logoImage}
+                  alt="Phoenix Counselling Logo"
+                  className="h-10 md:h-12 w-auto"
+                />
+                <span className="text-lg md:text-xl font-semibold text-gray-900">
+                  Phoenix Counselling
+                </span>
+              </div>
 
-            {/* Desktop Navigation */}
-            <nav className="hidden md:flex items-center space-x-6">
-              <button
-                onClick={() => scrollToSection("about-me")}
-                className="text-gray-700 hover:text-purple-600 transition-colors text-base font-medium"
-              >
-                About me
-              </button>
-              <button
-                onClick={() => scrollToSection("counselling-services")}
-                className="text-gray-700 hover:text-purple-600 transition-colors text-base font-medium"
-              >
-                Counselling Services
-              </button>
-              <button
-                onClick={() => scrollToSection("faqs")}
-                className="text-gray-700 hover:text-purple-600 transition-colors text-base font-medium"
-              >
-                FAQs
-              </button>
-              <button
-                onClick={() => scrollToSection("testimonials")}
-                className="text-gray-700 hover:text-purple-600 transition-colors text-base font-medium"
-              >
-                Testimonials
-              </button>
-              <button
-                onClick={() => scrollToSection("contact-me")}
-                className="text-gray-700 hover:text-purple-600 transition-colors text-base font-medium"
-              >
-                Contact Me
-              </button>
-            </nav>
+              {/* Desktop Navigation */}
+              <nav className="hidden md:flex items-center space-x-6">
+                <button
+                  onClick={() => scrollToSection("about-me")}
+                  className="text-gray-700 hover:text-purple-600 transition-colors text-base font-medium"
+                >
+                  About Me
+                </button>
+                <button
+                  onClick={() => scrollToSection("counselling-services")}
+                  className="text-gray-700 hover:text-purple-600 transition-colors text-base font-medium"
+                >
+                  Counselling Services
+                </button>
+                <button
+                  onClick={() => scrollToSection("faqs")}
+                  className="text-gray-700 hover:text-purple-600 transition-colors text-base font-medium"
+                >
+                  FAQs
+                </button>
+                <button
+                  onClick={() => scrollToSection("testimonials")}
+                  className="text-gray-700 hover:text-purple-600 transition-colors text-base font-medium"
+                >
+                  Testimonials
+                </button>
+                <button
+                  onClick={() => scrollToSection("contact-me")}
+                  className="text-gray-700 hover:text-purple-600 transition-colors text-base font-medium"
+                >
+                  Contact Me
+                </button>
+              </nav>
 
-            {/* Mobile Menu Button */}
-            <button
-              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="md:hidden text-gray-700 hover:text-purple-600 transition-colors text-base font-medium"
-              aria-label="Toggle menu"
-            >
-              Links
-            </button>
-          </div>
-        </div>
-
-        {/* Mobile Fullscreen Menu */}
-        {isMobileMenuOpen && (
-          <div className="fixed inset-0 z-50 bg-white md:hidden">
-            <div className="flex flex-col items-center justify-center h-full space-y-8">
+              {/* Mobile Menu Button */}
               <button
-                onClick={() => scrollToSection("about-me")}
-                className="text-2xl font-medium text-gray-900 hover:text-purple-600 transition-colors"
+                onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+                className="md:hidden text-gray-700 hover:text-purple-600 transition-colors text-base font-medium"
+                aria-label="Toggle menu"
               >
-                About me
-              </button>
-              <button
-                onClick={() => scrollToSection("counselling-services")}
-                className="text-2xl font-medium text-gray-900 hover:text-purple-600 transition-colors"
-              >
-                Counselling Services
-              </button>
-              <button
-                onClick={() => scrollToSection("faqs")}
-                className="text-2xl font-medium text-gray-900 hover:text-purple-600 transition-colors"
-              >
-                FAQs
-              </button>
-              <button
-                onClick={() => scrollToSection("testimonials")}
-                className="text-2xl font-medium text-gray-900 hover:text-purple-600 transition-colors"
-              >
-                Testimonials
-              </button>
-              <button
-                onClick={() => scrollToSection("contact-me")}
-                className="text-2xl font-medium text-gray-900 hover:text-purple-600 transition-colors"
-              >
-                Contact Me
-              </button>
-              <button
-                onClick={() => setIsMobileMenuOpen(false)}
-                className="mt-8 text-lg text-gray-500 hover:text-gray-700"
-              >
-                Close
+                Links
               </button>
             </div>
           </div>
-        )}
-      </header>
 
-      <div>
-        {/* Header Section */}
-        <header className="text-center mb-8 md:mb-12 pt-8">
-          <h1 className="text-3xl md:text-4xl font-bold mb-2">
-            Tim Head <span className="font-normal">Ph.D</span>{" "}
-            <span className="font-normal">R.C.C.</span>
-          </h1>
+          {/* Mobile Fullscreen Menu */}
+          {isMobileMenuOpen && (
+            <div className="fixed inset-0 z-50 bg-white md:hidden">
+              <div className="flex flex-col items-center justify-center h-full space-y-8">
+                <button
+                  onClick={() => scrollToSection("about-me")}
+                  className="text-2xl font-medium text-gray-900 hover:text-purple-600 transition-colors"
+                >
+                  About Me
+                </button>
+                <button
+                  onClick={() => scrollToSection("counselling-services")}
+                  className="text-2xl font-medium text-gray-900 hover:text-purple-600 transition-colors"
+                >
+                  Counselling Services
+                </button>
+                <button
+                  onClick={() => scrollToSection("faqs")}
+                  className="text-2xl font-medium text-gray-900 hover:text-purple-600 transition-colors"
+                >
+                  FAQs
+                </button>
+                <button
+                  onClick={() => scrollToSection("testimonials")}
+                  className="text-2xl font-medium text-gray-900 hover:text-purple-600 transition-colors"
+                >
+                  Testimonials
+                </button>
+                <button
+                  onClick={() => scrollToSection("contact-me")}
+                  className="text-2xl font-medium text-gray-900 hover:text-purple-600 transition-colors"
+                >
+                  Contact Me
+                </button>
+                <button
+                  onClick={() => setIsMobileMenuOpen(false)}
+                  className="mt-8 text-lg text-gray-500 hover:text-gray-700"
+                >
+                  Close
+                </button>
+              </div>
+            </div>
+          )}
         </header>
 
-        {/* About Me Section */}
-        <section
-          id="about-me"
-          className="max-w-5xl mx-auto rounded-lg p-6 md:p-8 mb-8 scroll-mt-20"
-        >
-          <div className="flex flex-col md:flex-row gap-6 md:gap-12">
-            {/* Left Side: Header and Profile Image */}
-            <div className="flex flex-col items-center md:items-start md:w-1/3">
-              <h2 className="text-2xl md:text-3xl font-semibold mb-6 text-center md:text-left">
-                About me
-              </h2>
-              <img
-                src={timHeadImage}
-                alt="Tim Head"
-                className="rounded-lg shadow-md border-2 border-purple-300 max-w-xs w-full h-auto"
-              />
-            </div>
+        <div>
+          {/* Header Section */}
+          <header className="text-center mb-8 md:mb-12 pt-8">
+            <h1 className="text-3xl md:text-4xl font-bold mb-2">
+              Tim Head <span className="font-normal">Ph.D</span>{" "}
+              <span className="font-normal">R.C.C.</span>
+            </h1>
+          </header>
 
-            {/* Right Side: Content */}
-            <div className="flex-1 space-y-6">
-              {/* Education Section */}
-              <div>
-                <h3 className="text-xl font-bold text-gray-900 mb-3">
-                  Education
-                </h3>
-                <ul className="space-y-2 ml-4">
-                  <li className="text-base md:text-lg text-gray-700 leading-relaxed">
-                    <span className="font-semibold">·</span> Ph.D in
-                    Developmental Psychology, U.B.C.
-                  </li>
-                  <li className="text-base md:text-lg text-gray-700 leading-relaxed ml-6">
-                    (Specialized in Family Attachment Relationships, and in
-                    Developmental Psychopathology)
-                  </li>
-                  <li className="text-base md:text-lg text-gray-700 leading-relaxed">
-                    <span className="font-semibold">·</span> Master's Degree in
-                    Health Education, U.B.C.
-                  </li>
-                  <li className="text-base md:text-lg text-gray-700 leading-relaxed ml-6">
-                    (Specialized in child issues of neglect, physical and sexual
-                    abuse)
-                  </li>
-                </ul>
+          {/* About Me Section */}
+          <section
+            id="about-me"
+            className="max-w-5xl mx-auto rounded-lg p-6 md:p-8 mb-8 scroll-mt-20"
+          >
+            <div className="flex flex-col md:flex-row gap-6 md:gap-12">
+              {/* Left Side: Header and Profile Image */}
+              <div className="flex flex-col items-center md:items-start md:w-1/3">
+                <h2 className="text-2xl md:text-3xl font-semibold mb-6 text-center md:text-left">
+                  About Me
+                </h2>
+                <img
+                  src={timHeadImage}
+                  alt="Tim Head"
+                  className="rounded-lg shadow-md border-2 border-purple-300 max-w-xs w-full h-auto"
+                />
               </div>
 
-              {/* Internship and Experience Section */}
-              <div>
-                <h3 className="text-xl font-bold text-gray-900 mb-3">
-                  Internship and Experience
-                </h3>
-                <ul className="space-y-2 ml-4">
-                  <li className="text-base md:text-lg text-gray-700 leading-relaxed">
-                    <span className="font-semibold">·</span> One year Psychology
-                    – Family Counselling Internship.
-                  </li>
-                  <li className="text-base md:text-lg text-gray-700 leading-relaxed">
-                    <span className="font-semibold">·</span> Many years
-                    experience as a family counsellor (since 2005 in private
-                    practice, prior to that four with Delta Youth Services).
-                  </li>
-                  <li className="text-base md:text-lg text-gray-700 leading-relaxed">
-                    <span className="font-semibold">·</span> One year as a
-                    Clinical Consultant to foster parents.
-                  </li>
-                  <li className="text-base md:text-lg text-gray-700 leading-relaxed">
-                    <span className="font-semibold">·</span> Additional six
-                    years in part time private practice.
-                  </li>
-                  <li className="text-base md:text-lg text-gray-700 leading-relaxed">
-                    <span className="font-semibold">·</span> Twelve years of
-                    experience working with children, youth and families in
-                    group homes, family homes, and therapy office settings -
-                    including work experience with autistic teens, teens on
-                    probation, homeless people, and individuals with drug and
-                    alcohol addictions combined with other psychiatric
-                    disorders.
-                  </li>
-                  <li className="text-base md:text-lg text-gray-700 leading-relaxed">
-                    <span className="font-semibold">·</span> Past facilitator of
-                    workshops in counselling.
-                  </li>
-                </ul>
-              </div>
-
-              {/* Philosophy Section */}
-              <div>
-                <h3 className="text-xl font-bold text-gray-900 mb-3">
-                  Philosophy
-                </h3>
-                <div className="space-y-4 ml-4">
-                  <p className="text-base md:text-lg text-gray-700 leading-relaxed">
-                    Everyone, no matter how old or unhappy -- can learn, grow,
-                    solve problems, and let go of suffering.
-                  </p>
-                  <p className="text-base md:text-lg text-gray-700 leading-relaxed">
-                    For each of us, well-being is more than possible, and
-                    achievable through understandable methods of self-care.
-                  </p>
-                  <p className="text-base md:text-lg text-gray-700 leading-relaxed">
-                    Couples can engage in good communication and cultivate a
-                    healthy relationship if they accept that their own and their
-                    partners' intentions are good (assumption of good will), and
-                    assume that understanding is possible (assumption of
-                    understanding) but requires patience and hard work
-                    (assumption of commitment to relationship, and perhaps
-                    therapy).
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Counselling Services Section */}
-        <section
-          id="counselling-services"
-          className="max-w-5xl mx-auto rounded-lg p-6 md:p-8 mb-8 scroll-mt-20"
-        >
-          <div className="flex flex-col md:flex-row gap-6 md:gap-12">
-            {/* Left Side: Header */}
-            <div className="flex flex-col items-center md:items-start md:w-1/3">
-              <h2 className="text-2xl md:text-3xl font-semibold mb-6 text-center md:text-left">
-                Counselling Services
-              </h2>
-            </div>
-
-            {/* Right Side: Content */}
-            <div className="flex-1 space-y-6">
-              <p className="text-base md:text-lg text-gray-700 leading-relaxed">
-                In general I work with clients at multiple levels according to
-                what best fits with each individual or family – emotional and
-                psychological, breath and body (internal sensation and other
-                experience), and spiritual.
-              </p>
-
-              {/* Individual Counselling */}
-              <div>
-                <h3 className="text-xl font-bold text-gray-900 mb-3">
-                  Individual
-                </h3>
-                <ul className="space-y-2 ml-4">
-                  <li className="text-base md:text-lg text-gray-700 leading-relaxed">
-                    <span className="font-semibold">·</span> Individual
-                    counselling
-                  </li>
-                  <li className="text-base md:text-lg text-gray-700 leading-relaxed">
-                    <span className="font-semibold">·</span> Teen counselling
-                  </li>
-                  <li className="text-base md:text-lg text-gray-700 leading-relaxed">
-                    <span className="font-semibold">·</span> Anxiety
-                  </li>
-                  <li className="text-base md:text-lg text-gray-700 leading-relaxed">
-                    <span className="font-semibold">·</span> Depression
-                  </li>
-                  <li className="text-base md:text-lg text-gray-700 leading-relaxed">
-                    <span className="font-semibold">·</span> Bullying issues
-                  </li>
-                  <li className="text-base md:text-lg text-gray-700 leading-relaxed">
-                    <span className="font-semibold">·</span> Self-esteem work
-                  </li>
-                  <li className="text-base md:text-lg text-gray-700 leading-relaxed">
-                    <span className="font-semibold">·</span> Grief or loss
-                  </li>
-                  <li className="text-base md:text-lg text-gray-700 leading-relaxed">
-                    <span className="font-semibold">·</span> Childhood neglect
-                    and abuse issues
-                  </li>
-                  <li className="text-base md:text-lg text-gray-700 leading-relaxed">
-                    <span className="font-semibold">·</span> Family of origin
-                    work / psychotherapy
-                  </li>
-                  <li className="text-base md:text-lg text-gray-700 leading-relaxed">
-                    <span className="font-semibold">·</span> Drug or alcohol
-                    issues
-                  </li>
-                  <li className="text-base md:text-lg text-gray-700 leading-relaxed">
-                    <span className="font-semibold">·</span> Work problems
-                  </li>
-                  <li className="text-base md:text-lg text-gray-700 leading-relaxed">
-                    <span className="font-semibold">·</span> Road rage / Anger
-                  </li>
-                  <li className="text-base md:text-lg text-gray-700 leading-relaxed">
-                    <span className="font-semibold">·</span> Life transitions
-                  </li>
-                  <li className="text-base md:text-lg text-gray-700 leading-relaxed">
-                    <span className="font-semibold">·</span> Stress reduction
-                  </li>
-                  <li className="text-base md:text-lg text-gray-700 leading-relaxed">
-                    <span className="font-semibold">·</span> Healing of trauma
-                  </li>
-                  <li className="text-base md:text-lg text-gray-700 leading-relaxed">
-                    <span className="font-semibold">·</span> Other
-                  </li>
-                </ul>
-              </div>
-
-              {/* Family Counselling */}
-              <div>
-                <h3 className="text-xl font-bold text-gray-900 mb-3">Family</h3>
-                <ul className="space-y-2 ml-4">
-                  <li className="text-base md:text-lg text-gray-700 leading-relaxed">
-                    <span className="font-semibold">·</span> Family counselling
-                  </li>
-                  <li className="text-base md:text-lg text-gray-700 leading-relaxed">
-                    <span className="font-semibold">·</span> Marriage or couples
-                    counselling
-                  </li>
-                  <li className="text-base md:text-lg text-gray-700 leading-relaxed">
-                    <span className="font-semibold">·</span> Parenting
-                    challenges
-                  </li>
-                  <li className="text-base md:text-lg text-gray-700 leading-relaxed">
-                    <span className="font-semibold">·</span> Parenting through
-                    divorce
-                  </li>
-                  <li className="text-base md:text-lg text-gray-700 leading-relaxed">
-                    <span className="font-semibold">·</span> Conflict resolution
-                  </li>
-                  <li className="text-base md:text-lg text-gray-700 leading-relaxed">
-                    <span className="font-semibold">·</span> Communication
-                    building
-                  </li>
-                  <li className="text-base md:text-lg text-gray-700 leading-relaxed">
-                    <span className="font-semibold">·</span> Families affected
-                    by mental illness
-                  </li>
-                  <li className="text-base md:text-lg text-gray-700 leading-relaxed">
-                    <span className="font-semibold">·</span> Any Individual item
-                    above
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Influences Section */}
-        <section className="max-w-5xl mx-auto rounded-lg p-6 md:p-8 mb-8">
-          <div className="flex flex-col md:flex-row gap-6 md:gap-12">
-            {/* Left Side: Header */}
-            <div className="flex flex-col items-center md:items-start md:w-1/3">
-              <h2 className="text-2xl md:text-3xl font-semibold mb-6 text-center md:text-left">
-                Influences
-              </h2>
-            </div>
-
-            {/* Right Side: Content */}
-            <div className="flex-1 space-y-4">
-              <p className="text-base md:text-lg text-gray-700 leading-relaxed">
-                I have a general interest in experiential, non-intellectual
-                therapies. In coordinating and balancing various influences I am
-                guided by my Satir family and individual counselling training.
-                It is highly positive and allows for considerable flexibility.
-                (Satir is one of the pioneers of family therapy – see{" "}
-                <a
-                  href="http://www.satirpacific.org/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-purple-600 hover:text-purple-800 underline"
-                >
-                  www.satirpacific.org
-                </a>
-                ). Other influences include attachment theory and research,
-                Option counselling, somatic experiencing and breath work, and
-                the Socratic dialogue.
-              </p>
-            </div>
-          </div>
-        </section>
-
-        {/* FAQ Section */}
-        <section
-          id="faqs"
-          className="max-w-5xl mx-auto rounded-lg p-6 md:p-8 mb-8 scroll-mt-20"
-        >
-          <div className="flex flex-col md:flex-row gap-6 md:gap-12">
-            {/* Left Side: Header */}
-            <div className="flex flex-col items-center md:items-start md:w-1/3">
-              <h2 className="text-2xl md:text-3xl font-semibold mb-6 text-center md:text-left">
-                Frequently Asked Questions
-              </h2>
-            </div>
-
-            {/* Right Side: FAQ Items */}
-            <div className="flex-1 space-y-8">
-              {faqs.map((faq, index) => (
-                <div
-                  key={index}
-                  className="border-b border-purple-200 pb-6 last:border-b-0 last:pb-0"
-                >
-                  <h3 className="text-lg md:text-xl font-semibold text-gray-900 mb-3">
-                    {faq.question}
+              {/* Right Side: Content */}
+              <div className="flex-1 space-y-6">
+                {/* Education Section */}
+                <div>
+                  <h3 className="text-xl font-bold text-gray-900 mb-3">
+                    Education
                   </h3>
-                  <p className="text-base md:text-lg text-gray-700 leading-relaxed">
-                    {faq.answer}
-                  </p>
+                  <ul className="space-y-2 ml-4">
+                    <li className="text-base md:text-lg text-gray-700 leading-relaxed">
+                      <span className="font-semibold">·</span> Ph.D in
+                      Developmental Psychology, U.B.C.
+                    </li>
+                    <li className="text-base md:text-lg text-gray-700 leading-relaxed ml-6">
+                      (Specialized in Family Attachment Relationships, and in
+                      Developmental Psychopathology)
+                    </li>
+                    <li className="text-base md:text-lg text-gray-700 leading-relaxed">
+                      <span className="font-semibold">·</span> Master's Degree
+                      in Health Education, U.B.C.
+                    </li>
+                    <li className="text-base md:text-lg text-gray-700 leading-relaxed ml-6">
+                      (Specialized in child issues of neglect, physical and
+                      sexual abuse)
+                    </li>
+                  </ul>
                 </div>
-              ))}
-            </div>
-          </div>
-        </section>
 
-        {/* Testimonials Section */}
-        <section
-          id="testimonials"
-          className="max-w-5xl mx-auto rounded-lg p-6 md:p-8 mb-8 scroll-mt-20"
-        >
-          <div className="flex flex-col md:flex-row gap-6 md:gap-12">
-            {/* Left Side: Header */}
-            <div className="flex flex-col items-center md:items-start md:w-1/3">
-              <h2 className="text-2xl md:text-3xl font-semibold mb-6 text-center md:text-left">
-                Testimonials
-              </h2>
-            </div>
+                {/* Internship and Experience Section */}
+                <div>
+                  <h3 className="text-xl font-bold text-gray-900 mb-3">
+                    Internship and Experience
+                  </h3>
+                  <ul className="space-y-2 ml-4">
+                    <li className="text-base md:text-lg text-gray-700 leading-relaxed">
+                      <span className="font-semibold">·</span> One year
+                      Psychology – Family Counselling Internship.
+                    </li>
+                    <li className="text-base md:text-lg text-gray-700 leading-relaxed">
+                      <span className="font-semibold">·</span> Many years
+                      experience as a family counsellor (since 2005 in private
+                      practice, prior to that four with Delta Youth Services).
+                    </li>
+                    <li className="text-base md:text-lg text-gray-700 leading-relaxed">
+                      <span className="font-semibold">·</span> One year as a
+                      Clinical Consultant to foster parents.
+                    </li>
+                    <li className="text-base md:text-lg text-gray-700 leading-relaxed">
+                      <span className="font-semibold">·</span> Additional six
+                      years in part time private practice.
+                    </li>
+                    <li className="text-base md:text-lg text-gray-700 leading-relaxed">
+                      <span className="font-semibold">·</span> Twelve years of
+                      experience working with children, youth and families in
+                      group homes, family homes, and therapy office settings -
+                      including work experience with autistic teens, teens on
+                      probation, homeless people, and individuals with drug and
+                      alcohol addictions combined with other psychiatric
+                      disorders.
+                    </li>
+                    <li className="text-base md:text-lg text-gray-700 leading-relaxed">
+                      <span className="font-semibold">·</span> Past facilitator
+                      of workshops in counselling.
+                    </li>
+                  </ul>
+                </div>
 
-            {/* Right Side: Testimonials */}
-            <div className="flex-1 space-y-8">
-              {testimonials.map((testimonial, index) => (
-                <blockquote
-                  key={index}
-                  className="border-l-4 border-purple-500 pl-6 pr-4 py-4 bg-white rounded-r-lg shadow-sm relative"
-                >
-                  <div className="absolute top-0 left-4 text-purple-300 text-6xl font-serif leading-none -mt-2">
-                    "
+                {/* Philosophy Section */}
+                <div>
+                  <h3 className="text-xl font-bold text-gray-900 mb-3">
+                    Philosophy
+                  </h3>
+                  <div className="space-y-4 ml-4">
+                    <p className="text-base md:text-lg text-gray-700 leading-relaxed">
+                      Everyone, no matter how old or unhappy -- can learn, grow,
+                      solve problems, and let go of suffering.
+                    </p>
+                    <p className="text-base md:text-lg text-gray-700 leading-relaxed">
+                      For each of us, well-being is more than possible, and
+                      achievable through understandable methods of self-care.
+                    </p>
+                    <p className="text-base md:text-lg text-gray-700 leading-relaxed">
+                      Couples can engage in good communication and cultivate a
+                      healthy relationship if they accept that their own and
+                      their partners' intentions are good (assumption of good
+                      will), and assume that understanding is possible
+                      (assumption of understanding) but requires patience and
+                      hard work (assumption of commitment to relationship, and
+                      perhaps therapy).
+                    </p>
                   </div>
-                  <p className="text-base md:text-lg text-gray-700 leading-relaxed italic relative z-10 mb-4">
-                    {testimonial.text}
-                  </p>
-                  <footer className="text-right">
-                    <cite className="text-base md:text-lg font-semibold text-purple-700 not-italic">
-                      — {testimonial.author}
-                    </cite>
-                  </footer>
-                </blockquote>
-              ))}
+                </div>
+              </div>
             </div>
-          </div>
-        </section>
+          </section>
 
-        {/* Contact Me Section */}
-        <section
-          id="contact-me"
-          className="max-w-5xl mx-auto rounded-lg p-6 md:p-8 mb-8 scroll-mt-20"
+          {/* Counselling Services Section */}
+          <section
+            id="counselling-services"
+            className="max-w-5xl mx-auto rounded-lg p-6 md:p-8 mb-8 scroll-mt-20"
+          >
+            <div className="flex flex-col md:flex-row gap-6 md:gap-12">
+              {/* Left Side: Header */}
+              <div className="flex flex-col items-center md:items-start md:w-1/3">
+                <h2 className="text-2xl md:text-3xl font-semibold mb-6 text-center md:text-left">
+                  Counselling Services
+                </h2>
+              </div>
+
+              {/* Right Side: Content */}
+              <div className="flex-1 space-y-6">
+                <p className="text-base md:text-lg text-gray-700 leading-relaxed">
+                  In general I work with clients at multiple levels according to
+                  what best fits with each individual or family – emotional and
+                  psychological, breath and body (internal sensation and other
+                  experience), and spiritual.
+                </p>
+
+                {/* Individual Counselling */}
+                <div>
+                  <h3 className="text-xl font-bold text-gray-900 mb-3">
+                    Individual
+                  </h3>
+                  <ul className="space-y-2 ml-4">
+                    <li className="text-base md:text-lg text-gray-700 leading-relaxed">
+                      <span className="font-semibold">·</span> Individual
+                      counselling
+                    </li>
+                    <li className="text-base md:text-lg text-gray-700 leading-relaxed">
+                      <span className="font-semibold">·</span> Teen counselling
+                    </li>
+                    <li className="text-base md:text-lg text-gray-700 leading-relaxed">
+                      <span className="font-semibold">·</span> Anxiety
+                    </li>
+                    <li className="text-base md:text-lg text-gray-700 leading-relaxed">
+                      <span className="font-semibold">·</span> Depression
+                    </li>
+                    <li className="text-base md:text-lg text-gray-700 leading-relaxed">
+                      <span className="font-semibold">·</span> Bullying issues
+                    </li>
+                    <li className="text-base md:text-lg text-gray-700 leading-relaxed">
+                      <span className="font-semibold">·</span> Self-esteem work
+                    </li>
+                    <li className="text-base md:text-lg text-gray-700 leading-relaxed">
+                      <span className="font-semibold">·</span> Grief or loss
+                    </li>
+                    <li className="text-base md:text-lg text-gray-700 leading-relaxed">
+                      <span className="font-semibold">·</span> Childhood neglect
+                      and abuse issues
+                    </li>
+                    <li className="text-base md:text-lg text-gray-700 leading-relaxed">
+                      <span className="font-semibold">·</span> Family of origin
+                      work / psychotherapy
+                    </li>
+                    <li className="text-base md:text-lg text-gray-700 leading-relaxed">
+                      <span className="font-semibold">·</span> Drug or alcohol
+                      issues
+                    </li>
+                    <li className="text-base md:text-lg text-gray-700 leading-relaxed">
+                      <span className="font-semibold">·</span> Work problems
+                    </li>
+                    <li className="text-base md:text-lg text-gray-700 leading-relaxed">
+                      <span className="font-semibold">·</span> Road rage / Anger
+                    </li>
+                    <li className="text-base md:text-lg text-gray-700 leading-relaxed">
+                      <span className="font-semibold">·</span> Life transitions
+                    </li>
+                    <li className="text-base md:text-lg text-gray-700 leading-relaxed">
+                      <span className="font-semibold">·</span> Stress reduction
+                    </li>
+                    <li className="text-base md:text-lg text-gray-700 leading-relaxed">
+                      <span className="font-semibold">·</span> Healing of trauma
+                    </li>
+                    <li className="text-base md:text-lg text-gray-700 leading-relaxed">
+                      <span className="font-semibold">·</span> Other
+                    </li>
+                  </ul>
+                </div>
+
+                {/* Family Counselling */}
+                <div>
+                  <h3 className="text-xl font-bold text-gray-900 mb-3">
+                    Family
+                  </h3>
+                  <ul className="space-y-2 ml-4">
+                    <li className="text-base md:text-lg text-gray-700 leading-relaxed">
+                      <span className="font-semibold">·</span> Family
+                      counselling
+                    </li>
+                    <li className="text-base md:text-lg text-gray-700 leading-relaxed">
+                      <span className="font-semibold">·</span> Marriage or
+                      couples counselling
+                    </li>
+                    <li className="text-base md:text-lg text-gray-700 leading-relaxed">
+                      <span className="font-semibold">·</span> Parenting
+                      challenges
+                    </li>
+                    <li className="text-base md:text-lg text-gray-700 leading-relaxed">
+                      <span className="font-semibold">·</span> Parenting through
+                      divorce
+                    </li>
+                    <li className="text-base md:text-lg text-gray-700 leading-relaxed">
+                      <span className="font-semibold">·</span> Conflict
+                      resolution
+                    </li>
+                    <li className="text-base md:text-lg text-gray-700 leading-relaxed">
+                      <span className="font-semibold">·</span> Communication
+                      building
+                    </li>
+                    <li className="text-base md:text-lg text-gray-700 leading-relaxed">
+                      <span className="font-semibold">·</span> Families affected
+                      by mental illness
+                    </li>
+                    <li className="text-base md:text-lg text-gray-700 leading-relaxed">
+                      <span className="font-semibold">·</span> Any Individual
+                      item above
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          {/* Influences Section */}
+          <section className="max-w-5xl mx-auto rounded-lg p-6 md:p-8 mb-8">
+            <div className="flex flex-col md:flex-row gap-6 md:gap-12">
+              {/* Left Side: Header */}
+              <div className="flex flex-col items-center md:items-start md:w-1/3">
+                <h2 className="text-2xl md:text-3xl font-semibold mb-6 text-center md:text-left">
+                  Influences
+                </h2>
+              </div>
+
+              {/* Right Side: Content */}
+              <div className="flex-1 space-y-4">
+                <p className="text-base md:text-lg text-gray-700 leading-relaxed">
+                  I have a general interest in experiential, non-intellectual
+                  therapies. In coordinating and balancing various influences I
+                  am guided by my Satir family and individual counselling
+                  training. It is highly positive and allows for considerable
+                  flexibility. (Satir is one of the pioneers of family therapy –
+                  see{" "}
+                  <a
+                    href="http://www.satirpacific.org/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-purple-600 hover:text-purple-800 underline"
+                  >
+                    www.satirpacific.org
+                  </a>
+                  ). Other influences include attachment theory and research,
+                  Option counselling, somatic experiencing and breath work, and
+                  the Socratic dialogue.
+                </p>
+              </div>
+            </div>
+          </section>
+
+          {/* FAQ Section */}
+          <section
+            id="faqs"
+            className="max-w-5xl mx-auto rounded-lg p-6 md:p-8 mb-8 scroll-mt-20"
+          >
+            <div className="flex flex-col md:flex-row gap-6 md:gap-12">
+              {/* Left Side: Header */}
+              <div className="flex flex-col items-center md:items-start md:w-1/3">
+                <h2 className="text-2xl md:text-3xl font-semibold mb-6 text-center md:text-left">
+                  Frequently Asked Questions
+                </h2>
+              </div>
+
+              {/* Right Side: FAQ Items */}
+              <div className="flex-1 space-y-8">
+                {faqs.map((faq, index) => (
+                  <div
+                    key={index}
+                    className="border-b border-purple-200 pb-6 last:border-b-0 last:pb-0"
+                  >
+                    <h3 className="text-lg md:text-xl font-semibold text-gray-900 mb-3">
+                      {faq.question}
+                    </h3>
+                    <p className="text-base md:text-lg text-gray-700 leading-relaxed">
+                      {faq.answer}
+                    </p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </section>
+
+          {/* Testimonials Section */}
+          <section
+            id="testimonials"
+            className="max-w-5xl mx-auto rounded-lg p-6 md:p-8 mb-8 scroll-mt-20"
+          >
+            <div className="flex flex-col md:flex-row gap-6 md:gap-12">
+              {/* Left Side: Header */}
+              <div className="flex flex-col items-center md:items-start md:w-1/3">
+                <h2 className="text-2xl md:text-3xl font-semibold mb-6 text-center md:text-left">
+                  Testimonials
+                </h2>
+              </div>
+
+              {/* Right Side: Testimonials */}
+              <div className="flex-1 space-y-8">
+                {testimonials.map((testimonial, index) => (
+                  <blockquote
+                    key={index}
+                    className="border-l-4 border-purple-500 pl-6 pr-4 pb-4 pt-8 bg-white rounded-r-lg shadow-sm relative"
+                  >
+                    <div className="absolute top-2 left-4 text-purple-300 text-6xl font-serif leading-none -mt-2">
+                      "
+                    </div>
+                    <p className="text-base md:text-lg text-gray-700 leading-relaxed italic relative z-10 mb-4">
+                      {testimonial.text}
+                    </p>
+                    {testimonial.author && (
+                      <footer className="text-right">
+                        <cite className="text-base md:text-lg font-semibold text-purple-700 not-italic">
+                          — {testimonial.author}
+                        </cite>
+                      </footer>
+                    )}
+                  </blockquote>
+                ))}
+              </div>
+            </div>
+          </section>
+
+          {/* Contact Me Section */}
+          <section
+            id="contact-me"
+            className="max-w-5xl mx-auto rounded-lg p-6 md:p-8 mb-8 scroll-mt-20"
+          >
+            <div className="flex flex-col md:flex-row gap-6 md:gap-12">
+              {/* Left Side: Header */}
+              <div className="flex flex-col items-center md:items-start md:w-1/3">
+                <h2 className="text-2xl md:text-3xl font-semibold mb-6 text-center md:text-left">
+                  Contact Me
+                </h2>
+              </div>
+
+              {/* Right Side: Contact Information */}
+              <div className="flex-1 space-y-6">
+                <div className="space-y-2">
+                  <div className="text-base md:text-lg font-semibold text-gray-900">
+                    Email
+                  </div>
+                  <div className="text-base md:text-lg text-gray-700">
+                    <a
+                      href="mailto:timheadcounselling@gmail.com"
+                      className="text-purple-600 hover:text-purple-800 underline"
+                    >
+                      timheadcounselling@gmail.com
+                    </a>
+                  </div>
+                </div>
+
+                <div className="space-y-2">
+                  <div className="text-base md:text-lg font-semibold text-gray-900">
+                    Phone
+                  </div>
+                  <div className="text-base md:text-lg text-gray-700">
+                    <a
+                      href="tel:604-728-5207"
+                      className="text-purple-600 hover:text-purple-800 underline"
+                    >
+                      604-728-5207
+                    </a>
+                  </div>
+                </div>
+
+                <div className="space-y-2">
+                  <div className="text-base md:text-lg font-semibold text-gray-900">
+                    Address
+                  </div>
+                  <div className="text-base md:text-lg text-gray-700">
+                    2657 127 St. in the South Surrey, BC – White Rock area close
+                    to Crescent Beach
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </main>
+      <footer className="bg-white border-t border-purple-200 py-6 mt-8 text-center text-gray-700 text-xs">
+        © {new Date().getFullYear()} developed by{" "}
+        <a
+          href="https://github.com/matinlotfali"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-purple-400 hover:text-purple-800 font-medium"
         >
-          <div className="flex flex-col md:flex-row gap-6 md:gap-12">
-            {/* Left Side: Header */}
-            <div className="flex flex-col items-center md:items-start md:w-1/3">
-              <h2 className="text-2xl md:text-3xl font-semibold mb-6 text-center md:text-left">
-                Contact Me
-              </h2>
-            </div>
-
-            {/* Right Side: Contact Information */}
-            <div className="flex-1 space-y-6">
-              <div className="space-y-2">
-                <div className="text-base md:text-lg font-semibold text-gray-900">
-                  Email
-                </div>
-                <div className="text-base md:text-lg text-gray-700">
-                  <a
-                    href="mailto:timheadcounselling@gmail.com"
-                    className="text-purple-600 hover:text-purple-800 underline"
-                  >
-                    timheadcounselling@gmail.com
-                  </a>
-                </div>
-              </div>
-
-              <div className="space-y-2">
-                <div className="text-base md:text-lg font-semibold text-gray-900">
-                  Phone
-                </div>
-                <div className="text-base md:text-lg text-gray-700">
-                  <a
-                    href="tel:604-728-5207"
-                    className="text-purple-600 hover:text-purple-800 underline"
-                  >
-                    604-728-5207
-                  </a>
-                </div>
-              </div>
-
-              <div className="space-y-2">
-                <div className="text-base md:text-lg font-semibold text-gray-900">
-                  Address
-                </div>
-                <div className="text-base md:text-lg text-gray-700">
-                  2657 127 St. in the South Surrey, BC – White Rock area close
-                  to Crescent Beach
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-      </div>
-    </main>
+          Iman Mahmoudinasab
+        </a>
+        <span className="mx-2">|</span>
+        Powered by GitHub Pages
+      </footer>
+    </>
   );
 };
 
