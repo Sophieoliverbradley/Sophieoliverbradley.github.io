@@ -276,18 +276,16 @@ const IndexPage: React.FC<PageProps> = () => {
                   <h3 className="text-xl font-semibold text-gray-900 mb-3">
                     Education
                   </h3>
-                  <ul className="space-y-2 ml-4">
+                  <ul className="list-disc ml-6 space-y-2">
                     <li className="text-base md:text-lg text-gray-700 leading-relaxed">
-                      <span className="font-semibold">·</span> Ph.D in
-                      Developmental Psychology, U.B.C.{" "}
+                      Ph.D in Developmental Psychology, U.B.C.{" "}
                       <span className="text-base md:text-lg text-gray-500">
                         (Specialized in Family Attachment Relationships, and in
                         Developmental Psychopathology)
                       </span>
                     </li>
                     <li className="text-base md:text-lg text-gray-700 leading-relaxed">
-                      <span className="font-semibold">·</span> Master's Degree
-                      in Health Education, U.B.C.{" "}
+                      Master's Degree in Health Education, U.B.C.{" "}
                       <span className="text-base md:text-lg text-gray-500">
                         (Specialized in child issues of neglect, physical and
                         sexual abuse)
@@ -301,36 +299,31 @@ const IndexPage: React.FC<PageProps> = () => {
                   <h3 className="text-xl font-bold text-gray-900 mb-3">
                     Internship and Experience
                   </h3>
-                  <ul className="space-y-2 ml-4">
+                  <ul className="list-disc ml-6 space-y-2">
                     <li className="text-base md:text-lg text-gray-700 leading-relaxed">
-                      <span className="font-semibold">·</span> One year
-                      Psychology – Family Counselling Internship.
+                      One year Psychology – Family Counselling Internship.
                     </li>
                     <li className="text-base md:text-lg text-gray-700 leading-relaxed">
-                      <span className="font-semibold">·</span> Many years
-                      experience as a family counsellor (since 2005 in private
-                      practice, prior to that four with Delta Youth Services).
+                      Many years experience as a family counsellor (since 2005
+                      in private practice, prior to that four with Delta Youth
+                      Services).
                     </li>
                     <li className="text-base md:text-lg text-gray-700 leading-relaxed">
-                      <span className="font-semibold">·</span> One year as a
-                      Clinical Consultant to foster parents.
+                      One year as a Clinical Consultant to foster parents.
                     </li>
                     <li className="text-base md:text-lg text-gray-700 leading-relaxed">
-                      <span className="font-semibold">·</span> Additional six
-                      years in part time private practice.
+                      Additional six years in part time private practice.
                     </li>
                     <li className="text-base md:text-lg text-gray-700 leading-relaxed">
-                      <span className="font-semibold">·</span> Twelve years of
-                      experience working with children, youth and families in
-                      group homes, family homes, and therapy office settings -
-                      including work experience with autistic teens, teens on
-                      probation, homeless people, and individuals with drug and
-                      alcohol addictions combined with other psychiatric
-                      disorders.
+                      Twelve years of experience working with children, youth
+                      and families in group homes, family homes, and therapy
+                      office settings - including work experience with autistic
+                      teens, teens on probation, homeless people, and
+                      individuals with drug and alcohol addictions combined with
+                      other psychiatric disorders.
                     </li>
                     <li className="text-base md:text-lg text-gray-700 leading-relaxed">
-                      <span className="font-semibold">·</span> Past facilitator
-                      of workshops in counselling.
+                      Past facilitator of workshops in counselling.
                     </li>
                   </ul>
                 </div>
@@ -391,58 +384,54 @@ const IndexPage: React.FC<PageProps> = () => {
                   <h3 className="text-xl font-bold text-gray-900 mb-3">
                     Individual
                   </h3>
-                  <ul className="space-y-2 ml-4">
+                  <ul className="list-disc ml-6 space-y-2">
                     <li className="text-base md:text-lg text-gray-700 leading-relaxed">
-                      <span className="font-semibold">·</span> Individual
-                      counselling
+                      Individual counselling
                     </li>
                     <li className="text-base md:text-lg text-gray-700 leading-relaxed">
-                      <span className="font-semibold">·</span> Teen counselling
+                      Teen counselling
                     </li>
                     <li className="text-base md:text-lg text-gray-700 leading-relaxed">
-                      <span className="font-semibold">·</span> Anxiety
+                      Anxiety
                     </li>
                     <li className="text-base md:text-lg text-gray-700 leading-relaxed">
-                      <span className="font-semibold">·</span> Depression
+                      Depression
                     </li>
                     <li className="text-base md:text-lg text-gray-700 leading-relaxed">
-                      <span className="font-semibold">·</span> Bullying issues
+                      Bullying issues
                     </li>
                     <li className="text-base md:text-lg text-gray-700 leading-relaxed">
-                      <span className="font-semibold">·</span> Self-esteem work
+                      Self-esteem work
                     </li>
                     <li className="text-base md:text-lg text-gray-700 leading-relaxed">
-                      <span className="font-semibold">·</span> Grief or loss
+                      Grief or loss
                     </li>
                     <li className="text-base md:text-lg text-gray-700 leading-relaxed">
-                      <span className="font-semibold">·</span> Childhood neglect
-                      and abuse issues
+                      Childhood neglect and abuse issues
                     </li>
                     <li className="text-base md:text-lg text-gray-700 leading-relaxed">
-                      <span className="font-semibold">·</span> Family of origin
-                      work / psychotherapy
+                      Family of origin work / psychotherapy
                     </li>
                     <li className="text-base md:text-lg text-gray-700 leading-relaxed">
-                      <span className="font-semibold">·</span> Drug or alcohol
-                      issues
+                      Drug or alcohol issues
                     </li>
                     <li className="text-base md:text-lg text-gray-700 leading-relaxed">
-                      <span className="font-semibold">·</span> Work problems
+                      Work problems
                     </li>
                     <li className="text-base md:text-lg text-gray-700 leading-relaxed">
-                      <span className="font-semibold">·</span> Road rage / Anger
+                      Road rage / Anger
                     </li>
                     <li className="text-base md:text-lg text-gray-700 leading-relaxed">
-                      <span className="font-semibold">·</span> Life transitions
+                      Life transitions
                     </li>
                     <li className="text-base md:text-lg text-gray-700 leading-relaxed">
-                      <span className="font-semibold">·</span> Stress reduction
+                      Stress reduction
                     </li>
                     <li className="text-base md:text-lg text-gray-700 leading-relaxed">
-                      <span className="font-semibold">·</span> Healing of trauma
+                      Healing of trauma
                     </li>
                     <li className="text-base md:text-lg text-gray-700 leading-relaxed">
-                      <span className="font-semibold">·</span> Other
+                      Other
                     </li>
                   </ul>
                 </div>
@@ -452,38 +441,30 @@ const IndexPage: React.FC<PageProps> = () => {
                   <h3 className="text-xl font-bold text-gray-900 mb-3">
                     Family
                   </h3>
-                  <ul className="space-y-2 ml-4">
+                  <ul className="list-disc ml-6 space-y-2">
                     <li className="text-base md:text-lg text-gray-700 leading-relaxed">
-                      <span className="font-semibold">·</span> Family
-                      counselling
+                      Family counselling
                     </li>
                     <li className="text-base md:text-lg text-gray-700 leading-relaxed">
-                      <span className="font-semibold">·</span> Marriage or
-                      couples counselling
+                      Marriage or couples counselling
                     </li>
                     <li className="text-base md:text-lg text-gray-700 leading-relaxed">
-                      <span className="font-semibold">·</span> Parenting
-                      challenges
+                      Parenting challenges
                     </li>
                     <li className="text-base md:text-lg text-gray-700 leading-relaxed">
-                      <span className="font-semibold">·</span> Parenting through
-                      divorce
+                      Parenting through divorce
                     </li>
                     <li className="text-base md:text-lg text-gray-700 leading-relaxed">
-                      <span className="font-semibold">·</span> Conflict
-                      resolution
+                      Conflict resolution
                     </li>
                     <li className="text-base md:text-lg text-gray-700 leading-relaxed">
-                      <span className="font-semibold">·</span> Communication
-                      building
+                      Communication building
                     </li>
                     <li className="text-base md:text-lg text-gray-700 leading-relaxed">
-                      <span className="font-semibold">·</span> Families affected
-                      by mental illness
+                      Families affected by mental illness
                     </li>
                     <li className="text-base md:text-lg text-gray-700 leading-relaxed">
-                      <span className="font-semibold">·</span> Any Individual
-                      item above
+                      Any Individual item above
                     </li>
                   </ul>
                 </div>
