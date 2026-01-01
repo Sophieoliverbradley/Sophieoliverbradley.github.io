@@ -251,6 +251,62 @@ const IndexPage: React.FC<PageProps> = () => {
             </h1>
           </header>
 
+          {/* Introduction Section */}
+          <section className="max-w-5xl mx-auto rounded-lg p-6 md:p-8 mb-8">
+            <div className="flex flex-col md:flex-row gap-6 md:gap-12">
+              {/* Left Side: Header */}
+              <div className="flex flex-col items-center md:items-start md:w-1/3">
+                <h2 className="text-2xl md:text-3xl font-semibold mb-6 text-center md:text-left">
+                  Introduction
+                </h2>
+              </div>
+
+              {/* Right Side: Content */}
+              <div className="flex-1 space-y-4">
+                <p className="text-base md:text-lg text-gray-700 leading-relaxed">
+                  Originally from Ontario I moved to the Lower Mainland in 1973
+                  (having heard that the flowers come out in February). I did
+                  all my post-secondary education here, worked in a variety of
+                  social service agencies and opened up a private practice in
+                  2005. I have a general interest in experiential,
+                  non-intellectual therapies. In addition to reducing suffering
+                  and increasing satisfaction I find experiential work enables
+                  deeper healing.
+                </p>
+                <p className="text-base md:text-lg text-gray-700 leading-relaxed">
+                  In integrating my various influences I am guided by my Satir
+                  family and individual counselling training. It is highly
+                  positive and allows for considerable flexibility. (Satir is
+                  one of the pioneers of family therapy – including the inner
+                  psychological work now called internal family systems work,
+                  see{" "}
+                  <a
+                    href="http://www.satirpacific.org/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-purple-600 hover:text-purple-800 underline"
+                  >
+                    www.satirpacific.org
+                  </a>
+                  ). Other influences include attachment theory and research,
+                  Option counselling, somatic experiencing and breath work, and
+                  the Socratic dialogue.
+                </p>
+                <p className="text-base md:text-lg text-gray-700 leading-relaxed">
+                  I also offer clients the opportunity to improve their
+                  relationships with a universal part of themselves called the
+                  critic / judge. Our sessions can help you sharply reduce
+                  negative criticism and judgement, making your relationships
+                  more satisfying and giving more motivation, energy and clarity
+                  for your goals and plans and living. Whether you are looking
+                  for help with anxiety and / or depression, looking for some
+                  help with a relationship, or are just hard on yourself this
+                  work can be very worthwhile.
+                </p>
+              </div>
+            </div>
+          </section>
+
           {/* About Me Section */}
           <section
             id="about-me"
@@ -468,41 +524,6 @@ const IndexPage: React.FC<PageProps> = () => {
                     </li>
                   </ul>
                 </div>
-              </div>
-            </div>
-          </section>
-
-          {/* Influences Section */}
-          <section className="max-w-5xl mx-auto rounded-lg p-6 md:p-8 mb-8">
-            <div className="flex flex-col md:flex-row gap-6 md:gap-12">
-              {/* Left Side: Header */}
-              <div className="flex flex-col items-center md:items-start md:w-1/3">
-                <h2 className="text-2xl md:text-3xl font-semibold mb-6 text-center md:text-left">
-                  Influences
-                </h2>
-              </div>
-
-              {/* Right Side: Content */}
-              <div className="flex-1 space-y-4">
-                <p className="text-base md:text-lg text-gray-700 leading-relaxed">
-                  I have a general interest in experiential, non-intellectual
-                  therapies. In coordinating and balancing various influences I
-                  am guided by my Satir family and individual counselling
-                  training. It is highly positive and allows for considerable
-                  flexibility. (Satir is one of the pioneers of family therapy –
-                  see{" "}
-                  <a
-                    href="http://www.satirpacific.org/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-purple-600 hover:text-purple-800 underline"
-                  >
-                    www.satirpacific.org
-                  </a>
-                  ). Other influences include attachment theory and research,
-                  Option counselling, somatic experiencing and breath work, and
-                  the Socratic dialogue.
-                </p>
               </div>
             </div>
           </section>
