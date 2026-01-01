@@ -466,7 +466,10 @@ const IndexPage: React.FC<PageProps> = () => {
                       Childhood neglect and abuse issues
                     </li>
                     <li className="text-base md:text-lg text-gray-700 leading-relaxed">
-                      Family of origin work / psychotherapy
+                      Family of origin work
+                    </li>
+                    <li className="text-base md:text-lg text-gray-700 leading-relaxed">
+                      Critic / Judge work
                     </li>
                     <li className="text-base md:text-lg text-gray-700 leading-relaxed">
                       Drug or alcohol issues
