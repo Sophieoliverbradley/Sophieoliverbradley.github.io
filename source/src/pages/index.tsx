@@ -562,7 +562,7 @@ const IndexPage: React.FC<PageProps> = () => {
                     <div className="absolute top-2 left-4 text-purple-300 text-6xl font-serif leading-none -mt-2">
                       "
                     </div>
-                    <p className="text-base md:text-lg text-gray-700 leading-relaxed italic relative z-10 mb-4">
+                    <p className="text-base md:text-lg text-gray-700 leading-relaxed relative z-10 mb-4">
                       {testimonial.text}
                     </p>
                     {testimonial.author && (
