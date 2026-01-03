@@ -115,11 +115,6 @@ const faqs = [
     answer:
       "I encourage open and honest feedback about all feelings including complaints. I know I am not perfect, and in addition that the therapeutic process can generate some sensitive feelings. I have not received any formal complaints since becoming a member of BCACC or at any prior time.",
   },
-  {
-    question: "How long have you been counselling professionally?",
-    answer:
-      "Full-time since around 1999 and part-time for a long time before that.",
-  },
 ];
 
 const IndexPage: React.FC<PageProps> = () => {
