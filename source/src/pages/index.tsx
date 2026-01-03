@@ -4,6 +4,7 @@ import SEO from "../components/seo";
 import Fonts from "../components/fonts";
 import timHeadImage from "../images/tim-head.jpeg";
 import logoImage from "../images/logo.png";
+import crescentBeachImage from "../images/crescent-beach.jpg";
 
 const testimonials = [
   {
@@ -131,6 +132,31 @@ const IndexPage: React.FC<PageProps> = () => {
   return (
     <>
       <main className="min-h-screen bg-purple-50 text-gray-900">
+        {/* Hero Banner */}
+        <div
+          id="banner1"
+          className="flex flex-col justify-end bg-cover bg-center bg-no-repeat px-6 md:px-16 lg:px-24 xl:px-[100px] py-8 md:py-12"
+          style={{
+            backgroundImage: `linear-gradient(rgba(0, 0, 0, 0) 70%, rgba(0, 0, 0, 0.5)), url(${crescentBeachImage})`,
+            height: "80vh",
+          }}
+        >
+          <div
+            className="px-6 py-8 -mx-6 md:-mx-16 lg:-mx-24 xl:-mx-[100px] -mb-8 md:-mb-12"
+            style={{
+              background:
+                "linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.8))",
+            }}
+          >
+            <h1 className="text-white font-bold text-5xl md:text-5xl lg:text-6xl mb-2 drop-shadow-lg">
+              Phoenix Counselling
+            </h1>
+            <span className="font-heading font-semibold text-white text-3xl drop-shadow-lg">
+              Tim Head <span className="font-normal text-2xl">Ph.D R.C.C.</span>
+            </span>
+          </div>
+        </div>
+
         {/* Sticky Header */}
         <header className="sticky top-0 z-50 bg-white shadow-md">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -238,14 +264,6 @@ const IndexPage: React.FC<PageProps> = () => {
         </header>
 
         <div>
-          {/* Header Section */}
-          <header className="text-center mb-8 md:mb-12 pt-8">
-            <h1 className="text-3xl md:text-4xl font-bold mb-2">
-              Tim Head <span className="font-normal">Ph.D</span>{" "}
-              <span className="font-normal">R.C.C.</span>
-            </h1>
-          </header>
-
           {/* Introduction Section */}
           <section className="max-w-5xl mx-auto rounded-lg p-6 md:p-8 mb-8">
             <div className="flex flex-col md:flex-row gap-6 md:gap-12">
