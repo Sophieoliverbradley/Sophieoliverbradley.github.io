@@ -387,7 +387,7 @@ const IndexPage: React.FC<PageProps> = () => {
                   <div className="space-y-4 ml-4">
                     <p className="text-base md:text-lg text-gray-700 leading-relaxed">
                       Everyone, no matter how old or unhappy -- can learn, grow,
-                      solve problems, and let go of suffering.
+                      solve problems, let go of suffering, and heal.
                     </p>
                     <p className="text-base md:text-lg text-gray-700 leading-relaxed">
                       For each of us, well-being is more than possible, and
