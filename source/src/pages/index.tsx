@@ -675,7 +675,7 @@ const IndexPage: React.FC<PageProps> = () => {
       <footer className="bg-white border-t border-purple-200 py-6 mt-8 text-center text-gray-700 text-xs">
         © {new Date().getFullYear()} developed by{" "}
         <a
-          href="https://github.com/matinlotfali"
+          href="https://hereismy.world/"
           target="_blank"
           rel="noopener noreferrer"
           className="text-purple-400 hover:text-purple-800 font-medium"
