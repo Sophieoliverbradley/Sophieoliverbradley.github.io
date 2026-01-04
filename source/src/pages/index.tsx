@@ -4,7 +4,7 @@ import SEO from "../components/seo";
 import Fonts from "../components/fonts";
 import timHeadImage from "../images/tim-head.jpeg";
 import logoImage from "../images/logo.png";
-import crescentBeachImage from "../images/crescent-beach.jpg";
+import crescentBeachImage from "../images/crescent-beach.webp";
 
 const testimonials = [
   {
@@ -148,7 +148,7 @@ const IndexPage: React.FC<PageProps> = () => {
                 "linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.8))",
             }}
           >
-            <h1 className="text-white font-bold text-5xl md:text-5xl lg:text-6xl mb-2 drop-shadow-lg">
+            <h1 className="text-white font-bold text-4xl md:text-5xl lg:text-6xl mb-2 drop-shadow-lg">
               Phoenix Counselling
             </h1>
             <span className="font-heading font-semibold text-white text-3xl drop-shadow-lg">
