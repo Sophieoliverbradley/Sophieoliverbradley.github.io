@@ -5,3 +5,4 @@ icons
 page-data
 static
 !source/**
+!.cursorignore
