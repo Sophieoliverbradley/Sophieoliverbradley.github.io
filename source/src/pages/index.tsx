@@ -732,7 +732,7 @@ const IndexPage: React.FC<PageProps> = () => {
           </section>
         </div>
       </main>
-      <footer className="border-t border-purple-200 py-6 mt-8 text-center text-gray-700 text-xs">
+      <footer className="border-t border-purple-200 py-6 mt-48 text-center text-gray-700 text-xs">
         © {new Date().getFullYear()} developed by{" "}
         <a
           href="https://hereismy.world/"
