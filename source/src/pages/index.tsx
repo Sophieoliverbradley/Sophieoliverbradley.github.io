@@ -2,7 +2,7 @@ import * as React from "react";
 import type { HeadFC, PageProps } from "gatsby";
 import SEO from "../components/seo";
 import Fonts from "../components/fonts";
-import timHeadImage from "../images/tim-head.jpeg";
+import timHeadImage from "../images/tim2.png";
 import logoImage from "../images/logo.png";
 import crescentBeachImage from "../images/crescent-beach.webp";
 
@@ -331,11 +331,28 @@ const IndexPage: React.FC<PageProps> = () => {
                 <h2 className="text-2xl md:text-3xl font-semibold mb-6 text-center md:text-left">
                   About Me
                 </h2>
-                <img
-                  src={timHeadImage}
-                  alt="Tim Head"
-                  className="rounded-lg shadow-md border-2 border-purple-300 max-w-xs w-full h-auto"
-                />
+                <div className="relative mt-4">
+                  <div
+                    className="absolute"
+                    style={{
+                      width: 320,
+                      height: 320,
+                      borderRadius: "9999px 9999px 0 9999px",
+                      backgroundColor: "#ecdef1", // tailwind purple-400
+                      top: -15,
+                      left: 10,
+                      zIndex: 0,
+                      // boxShadow: "0 10px 20px rgba(130, 88, 255, 0.15)",
+                    }}
+                  />
+                  <img
+                    src={timHeadImage}
+                    alt="Tim Head"
+                    width={300}
+                    height={300}
+                    className="rounded-full rounded-br-none shadow-md relative z-10"
+                  />
+                </div>
               </div>
 
               {/* Right Side: Content */}
