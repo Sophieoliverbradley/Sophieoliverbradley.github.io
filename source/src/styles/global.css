@@ -6,6 +6,9 @@
   --font-body: "Montserrat", sans-serif;
 }
 
+html {
+  background-color: #faf5ff;
+}
 body {
   font-family: var(--font-body);
 }

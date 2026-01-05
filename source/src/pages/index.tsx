@@ -134,7 +134,7 @@ const IndexPage: React.FC<PageProps> = () => {
 
   return (
     <>
-      <main className="min-h-screen bg-purple-50 text-gray-900">
+      <main className="min-h-screen text-gray-900">
         {/* Hero Banner */}
         <div
           id="banner1"
@@ -732,7 +732,7 @@ const IndexPage: React.FC<PageProps> = () => {
           </section>
         </div>
       </main>
-      <footer className="bg-white border-t border-purple-200 py-6 mt-8 text-center text-gray-700 text-xs">
+      <footer className="border-t border-purple-200 py-6 mt-8 text-center text-gray-700 text-xs">
         © {new Date().getFullYear()} developed by{" "}
         <a
           href="https://hereismy.world/"
