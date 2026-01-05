@@ -5,6 +5,9 @@ import Fonts from "../components/fonts";
 import timHeadImage from "../images/tim2.png";
 import logoImage from "../images/logo.png";
 import crescentBeachImage from "../images/crescent-beach.webp";
+import image01 from "../images/image-01.jpg";
+import image02 from "../images/image-02.jpg";
+import timHead01 from "../images/tim-head-01.jpg";
 
 const testimonials = [
   {
@@ -320,6 +323,19 @@ const IndexPage: React.FC<PageProps> = () => {
             </div>
           </section>
 
+          {/* Image Section */}
+          <section className="md:max-w-5xl mx-auto rounded-lg md:p-6 mb-8">
+            <div className="w-full">
+              <img
+                src={image01}
+                alt=""
+                className="w-full md:rounded-lg shadow-lg object-cover"
+                style={{ height: "60vh" }}
+                loading="lazy"
+              />
+            </div>
+          </section>
+
           {/* About Me Section */}
           <section
             id="about-me"
@@ -351,6 +367,7 @@ const IndexPage: React.FC<PageProps> = () => {
                     width={300}
                     height={300}
                     className="rounded-full rounded-br-none shadow-md relative z-10"
+                    loading="lazy"
                   />
                 </div>
               </div>
@@ -440,6 +457,19 @@ const IndexPage: React.FC<PageProps> = () => {
                   </div>
                 </div>
               </div>
+            </div>
+          </section>
+
+          {/* Image Section */}
+          <section className="md:max-w-5xl mx-auto rounded-lg md:p-6 mb-8">
+            <div className="w-full">
+              <img
+                src={image02}
+                alt=""
+                className="w-full md:rounded-lg shadow-lg object-cover"
+                style={{ height: "60vh" }}
+                loading="lazy"
+              />
             </div>
           </section>
 
@@ -558,6 +588,19 @@ const IndexPage: React.FC<PageProps> = () => {
                   </ul>
                 </div>
               </div>
+            </div>
+          </section>
+
+          {/* Image Section */}
+          <section className="md:max-w-5xl mx-auto rounded-lg md:p-6 mb-8">
+            <div className="w-full">
+              <img
+                src={timHead01}
+                alt=""
+                className="w-full md:rounded-lg shadow-lg object-cover"
+                style={{ height: "60vh" }}
+                loading="lazy"
+              />
             </div>
           </section>
 
