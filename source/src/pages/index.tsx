@@ -8,6 +8,7 @@ import crescentBeachImage from "../images/crescent-beach.webp";
 import image01 from "../images/image-01.jpg";
 import image02 from "../images/image-02.jpg";
 import timHead01 from "../images/tim-head-01.jpg";
+import stormImage from "../images/storm.jpg";
 
 const testimonials = [
   {
@@ -656,6 +657,17 @@ const IndexPage: React.FC<PageProps> = () => {
                     key={index}
                     className="border-l-4 border-purple-500 pl-6 pr-4 pb-4 pt-8 bg-white rounded-r-lg shadow-sm relative"
                   >
+                    {index === 1 && (
+                      <div className="mb-4 relative z-10">
+                        <img
+                          src={stormImage}
+                          alt="Storm landscape"
+                          className="w-full rounded-lg shadow-md object-cover"
+                          style={{ maxHeight: "300px" }}
+                          loading="lazy"
+                        />
+                      </div>
+                    )}
                     <div className="absolute top-2 left-4 text-purple-300 text-6xl font-serif leading-none -mt-2">
                       "
                     </div>
