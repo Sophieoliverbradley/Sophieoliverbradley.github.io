@@ -5,8 +5,8 @@ import Fonts from "../components/fonts";
 import timHeadImage from "../images/tim2.png";
 import logoImage from "../images/logo.png";
 import crescentBeachImage from "../images/crescent-beach.webp";
-import image01 from "../images/image-01.jpg";
-import image02 from "../images/image-02.jpg";
+import bcCoastalImage from "../images/bc-coastal.jpg";
+import mtBakerAndBirdsImage from "../images/mt-baker-and-birds.jpg";
 import timHead01 from "../images/tim-head-01.jpg";
 import stormImage from "../images/storm.jpg";
 
@@ -328,7 +328,7 @@ const IndexPage: React.FC<PageProps> = () => {
           <section className="md:max-w-5xl mx-auto rounded-lg md:p-6 mb-8">
             <div className="w-full">
               <img
-                src={image01}
+                src={bcCoastalImage}
                 alt=""
                 className="w-full md:rounded-lg shadow-lg object-cover"
                 style={{ height: "60vh" }}
@@ -465,7 +465,7 @@ const IndexPage: React.FC<PageProps> = () => {
           <section className="md:max-w-5xl mx-auto rounded-lg md:p-6 mb-8">
             <div className="w-full">
               <img
-                src={image02}
+                src={mtBakerAndBirdsImage}
                 alt=""
                 className="w-full md:rounded-lg shadow-lg object-cover"
                 style={{ height: "60vh" }}
