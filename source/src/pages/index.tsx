@@ -686,8 +686,7 @@ const IndexPage: React.FC<PageProps> = () => {
                         <img
                           src={localBeachWithLogImage}
                           alt="Beach with driftwood log"
-                          className="w-full rounded-lg shadow-md object-cover"
-                          style={{ maxHeight: "370px" }}
+                          className="w-full rounded-lg shadow-md object-cover h-[370px]"
                           loading="lazy"
                         />
                       </div>
