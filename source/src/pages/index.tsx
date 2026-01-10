@@ -9,6 +9,7 @@ import bcCoastalImage from "../images/bc-coastal.jpg";
 import mtBakerAndBirdsImage from "../images/mt-baker-and-birds.jpg";
 import timHead01 from "../images/tim-head-01.jpg";
 import stormImage from "../images/storm.jpg";
+import localBeachWithLogImage from "../images/local-beach-with-log.jpg";
 
 const testimonials = [
   {
@@ -679,6 +680,17 @@ const IndexPage: React.FC<PageProps> = () => {
                           — {testimonial.author}
                         </cite>
                       </footer>
+                    )}
+                    {index === 1 && (
+                      <div className="mt-4 relative z-10">
+                        <img
+                          src={localBeachWithLogImage}
+                          alt="Beach with driftwood log"
+                          className="w-full rounded-lg shadow-md object-cover"
+                          style={{ maxHeight: "370px" }}
+                          loading="lazy"
+                        />
+                      </div>
                     )}
                   </blockquote>
                 ))}
