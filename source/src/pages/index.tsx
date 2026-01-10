@@ -10,6 +10,7 @@ import mtBakerAndBirdsImage from "../images/mt-baker-and-birds.jpg";
 import timHead01 from "../images/tim-head-01.jpg";
 import stormImage from "../images/storm.jpg";
 import localBeachWithLogImage from "../images/local-beach-with-log.jpg";
+import singleIslandImage from "../images/single-island.jpg";
 
 const testimonials = [
   {
@@ -752,9 +753,21 @@ const IndexPage: React.FC<PageProps> = () => {
               </div>
             </div>
           </section>
+
+          {/* Image Section */}
+          <section className="md:max-w-5xl mx-auto rounded-lg md:p-6 mb-8">
+            <div className="w-full">
+              <img
+                src={singleIslandImage}
+                alt=""
+                className="w-full md:rounded-lg shadow-lg object-cover h-[40vh] md:h-[60vh]"
+                loading="lazy"
+              />
+            </div>
+          </section>
         </div>
       </main>
-      <footer className="border-t border-purple-200 py-6 mt-48 text-center text-gray-700 text-xs">
+      <footer className="py-6 mt-10  text-center text-gray-700 text-xs">
         © {new Date().getFullYear()} developed by{" "}
         <a
           href="https://hereismy.world/"
