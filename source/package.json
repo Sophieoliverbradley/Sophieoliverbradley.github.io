@@ -10,7 +10,8 @@
   "scripts": {
     "develop": "gatsby develop",
     "start": "gatsby develop",
-    "build": "gatsby clean && gatsby build && node scripts/build.js && gatsby clean && git add . && git commit -m 'Build & Deploy'",
+    "build": "gatsby clean && gatsby build && node scripts/build.js && gatsby clean",
+    "deploy": "git add . && git commit -m 'Build & Deploy' && git push origin main",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
     "typecheck": "tsc --noEmit"
