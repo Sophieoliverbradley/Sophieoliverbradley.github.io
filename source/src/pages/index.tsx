@@ -52,7 +52,7 @@ const faqs = [
   {
     question: "Where are your offices?",
     answer:
-      "2657 127 St. in the South Surrey, BC – White Rock area close to Crescent Beach",
+      "2657 127 St. in the South Surrey, BC – White Rock area close to Crescent Beach, within a half hour drive of Ladner or North Delta",
   },
   {
     question: "How much does it cost?",
