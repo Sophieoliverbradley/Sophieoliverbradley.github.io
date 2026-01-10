@@ -598,7 +598,7 @@ const IndexPage: React.FC<PageProps> = () => {
               <img
                 src={timHead01}
                 alt=""
-                className="w-full md:rounded-lg shadow-lg object-cover h-[40vh] lg:h-[60vh]"
+                className="w-full md:rounded-lg shadow-lg object-cover h-[40vh] md:h-[60vh]"
                 loading="lazy"
               />
             </div>
