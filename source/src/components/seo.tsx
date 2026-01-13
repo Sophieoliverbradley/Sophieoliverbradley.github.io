@@ -38,7 +38,7 @@ const SEO: React.FC<SEOProps> = ({
   const { title: defaultTitle, siteUrl } = site.siteMetadata;
 
   const seo = {
-    title: title ? `${title} | ${defaultTitle}` : defaultTitle,
+    title: title ? `${defaultTitle} | ${title}` : defaultTitle,
     description:
       description ||
       "Tim Head Counselling - Professional marriage, teens, and family counselling services in South Surrey and Ladner, BC.",

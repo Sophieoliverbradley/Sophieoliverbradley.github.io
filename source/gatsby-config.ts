@@ -2,13 +2,13 @@ import type { GatsbyConfig } from "gatsby";
 
 const config: GatsbyConfig = {
   siteMetadata: {
-    title: `Tim Head Counselling`,
+    title: `Phoenix Counselling`,
     siteUrl: `https://www.riseofthephoenix.ca`,
   },
   // More easily incorporate content into your pages through automatic TypeScript type generation and better GraphQL IntelliSense.
   // If you use VSCode you can also use the GraphQL plugin
   // Learn more at: https://gatsby.dev/graphql-typegen
-  graphqlTypegen: true,
+  graphqlTypegen: false,
   plugins: [
     "gatsby-plugin-postcss",
     {
@@ -16,7 +16,7 @@ const config: GatsbyConfig = {
       resolve: "gatsby-plugin-google-gtag",
       options: {
         trackingIds: [
-          "G-HCVZJ6MMET", // Google Analytics / GA
+          "G-S94LR97Z89", // Google Analytics / GA
         ],
         pluginConfig: {},
       },

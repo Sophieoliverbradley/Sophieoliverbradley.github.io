@@ -790,8 +790,8 @@ export const Head: HeadFC = () => (
   <>
     <Fonts />
     <SEO
-      title="Home / Frequently Asked Questions"
-      description="Frequently asked questions about Tim Head Counselling services. Get information about appointments, costs, locations, and more for marriage, teens, and family counselling in South Surrey and Ladner, BC."
+      title="Tim Head | Counselling Services"
+      description="Tim Head is a registered clinical counsellor in South Surrey, BC. He offers individual, family, and teen counselling services. Contact him for anxiety, depression, grief, and other issues."
       pathname="/"
     />
   </>
