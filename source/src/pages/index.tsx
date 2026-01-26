@@ -127,20 +127,93 @@ const faqs = [
 const IndexPage: React.FC<PageProps> = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = React.useState(false);
 
+  const sectionIds = React.useMemo(
+    () => [
+      "banner",
+      "introduction",
+      "about-me",
+      "counselling-services",
+      "faqs",
+      "testimonials",
+      "contact-me",
+    ],
+    []
+  );
+
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
     if (element) {
       element.scrollIntoView({ behavior: "smooth", block: "start" });
       setIsMobileMenuOpen(false);
+      if (typeof window !== "undefined") {
+        const nextUrl = `${window.location.pathname}${window.location.search}#${sectionId}`;
+        window.history.pushState(null, "", nextUrl);
+      }
     }
   };
+
+  React.useEffect(() => {
+    if (typeof window === "undefined") return;
+
+    // If the page is loaded with a hash, scroll to it after initial paint.
+    const initialHash = window.location.hash.replace("#", "");
+    if (initialHash) {
+      const el = document.getElementById(initialHash);
+      if (el) {
+        setTimeout(() => {
+          el.scrollIntoView({ behavior: "smooth", block: "start" });
+        }, 0);
+      }
+    }
+
+    let activeSectionId = window.location.hash.replace("#", "");
+    let rafId: number | null = null;
+
+    const updateHashFromScrollPosition = () => {
+      // Pick a scan line below the sticky header.
+      const scanY = Math.min(window.innerHeight * 0.33, 220);
+
+      const nextId =
+        sectionIds.find((id) => {
+          const el = document.getElementById(id);
+          if (!el) return false;
+          const rect = el.getBoundingClientRect();
+          return rect.top <= scanY && rect.bottom > scanY;
+        });
+
+      if (!nextId || nextId === activeSectionId) return;
+      activeSectionId = nextId;
+
+      const nextUrl = `${window.location.pathname}${window.location.search}#${nextId}`;
+      window.history.replaceState(null, "", nextUrl);
+    };
+
+    const onScrollOrResize = () => {
+      if (rafId !== null) return;
+      rafId = window.requestAnimationFrame(() => {
+        rafId = null;
+        updateHashFromScrollPosition();
+      });
+    };
+
+    // Run once to sync hash with current position.
+    updateHashFromScrollPosition();
+
+    window.addEventListener("scroll", onScrollOrResize, { passive: true });
+    window.addEventListener("resize", onScrollOrResize);
+    return () => {
+      if (rafId !== null) window.cancelAnimationFrame(rafId);
+      window.removeEventListener("scroll", onScrollOrResize);
+      window.removeEventListener("resize", onScrollOrResize);
+    };
+  }, [sectionIds]);
 
   return (
     <>
       <main className="min-h-screen text-gray-900">
         {/* Hero Banner */}
         <div
-          id="banner1"
+          id="banner"
           className="flex flex-col justify-end bg-cover bg-center bg-no-repeat px-6 md:px-16 lg:px-24 xl:px-[100px] py-8 md:py-12"
           style={{
             backgroundImage: `linear-gradient(rgba(0, 0, 0, 0) 70%, rgba(0, 0, 0, 0.5)), url(${crescentBeachImage})`,
@@ -271,7 +344,7 @@ const IndexPage: React.FC<PageProps> = () => {
 
         <div>
           {/* Introduction Section */}
-          <section className="max-w-5xl mx-auto rounded-lg p-6 md:p-8 mb-8">
+          <section id="introduction" className="max-w-5xl mx-auto rounded-lg p-6 md:p-8 mb-8">
             <div className="flex flex-col md:flex-row gap-6 md:gap-12">
               {/* Left Side: Header */}
               <div className="flex flex-col items-center md:items-start md:w-1/3">
